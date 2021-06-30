@@ -2,6 +2,7 @@
         <head>
         <title>CMSiMDE</title>
         <meta charset="utf-8">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -122,7 +123,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li class='has-children'><a href='CMSiMDE.html'>CMSiMDE</a><ul class='dropdown'><li class='has-children'><a href='基本操作.html'>基本操作</a><ul class='dropdown'><li><a href='客製化.html'>客製化</a><li><a href='編輯網頁內容.html'>編輯網頁內容</a><li><a href='上傳與引用檔案.html'>上傳與引用檔案</a><li><a href='上傳與引用圖片.html'>上傳與引用圖片</a><li><a href='嵌入程式碼.html'>嵌入程式碼</a><li><a href='嵌入影片檔.html'>嵌入影片檔</a><li><a href='檢視 STL.html'>檢視 STL</a></li></ul><li><a href='Gitlab 同步.html'>Gitlab 同步</a><li><a href='Heroku 部署.html'>Heroku 部署</a><li><a href='Fossil SCM.html'>Fossil SCM</a></li></ul><li><a href='建立網頁.html'>建立網頁</a><li class='has-children'><a href='注意事項.html'>注意事項</a><ul class='dropdown'><li><a href='標題選擇.html'>標題選擇</a><li><a href='靜態網頁 404.html'>靜態網頁 404</a><li><a href='動態網站錯誤.html'>動態網站錯誤</a></li></ul><li class='has-children'><a href='延伸開發.html'>延伸開發</a><ul class='dropdown'><li class='has-children'><a href='已知問題.html'>已知問題</a><ul class='dropdown'><li><a href='IPv6.html'>IPv6</a><li><a href='MathJax.html'>MathJax</a><li><a href='html 分頁.html'>html 分頁</a><li><a href='template.html'>template</a></li>
+                     <li><a href='倉儲.html'>倉儲</a><li class='has-children'><a href='2021.html'>2021</a><ul class='dropdown'><li><a href='2021.03.02.html'>2021.03.02</a><li><a href='2021.03.04.html'>2021.03.04</a><li><a href='2021.03.11.html'>2021.03.11</a><li><a href='2021.04.28.html'>2021.04.28</a><li><a href='2021.05.13.html'>2021.05.13</a></li></ul><li class='has-children'><a href='2021 P-TECH 暑期實習.html'>2021 P-TECH 暑期實習</a><ul class='dropdown'><li><a href='面試解果-今年疫情取消實習計畫.html'>面試解果-今年疫情取消實習計畫</a></li></ul><li class='has-children'><a href='插大.html'>插大</a><ul class='dropdown'><li><a href='國立普通大學.html'>國立普通大學</a><li><a href='國立科技大學.html'>國立科技大學</a></li>
                       </ul>
                 </nav>
               </div>
@@ -133,17 +134,24 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">注意事項 << <a href='注意事項.html'>Previous</a> <a href='靜態網頁 404.html'>Next</a> >> 靜態網頁 404<br /><h1>標題選擇</h1>
-<p>由於 CMSiMDE 中的動態網站透過 config/content.htm 的 H1~H3 超文件標註進行分頁, 因此使用者利用 cms.bat 開啟動態網站後, 必須注意各頁面標題文字的選擇:</p>
-<ol>
-<li><span style="background-color: #ffff99;">頁面標題文字儘量簡短</span> - 頁面標題就有如文章的章節標題, 只要該標題具有該頁面內容的代表性即可, 越簡短越好.</li>
-<li><span style="background-color: #ffff99;">頁面標題文字不要使用標點符號</span> - 因為標點符號中的 "/" 會造成頁面擷取時 URL 指令分段上的誤判, 至於標題文字中若有 ":" 則會在動態內容轉靜態內容時, 因 Windows 不允許檔案名稱帶有 ":" 而無法轉檔.</li>
-<li><span style="background-color: #ffff99;">頁面標題中不可以有超文件標註</span> - 由於 CMSiMDE 動態網站編輯器採用 GUI 進行, 採用滑鼠標修頁面標題時, 可能無意中將 HTML 標註放入 H1~H3 標題文字中, 如此可能會造成 CMSiMDE 分頁錯誤而無法開啟動態網站. 當使用者要檢查所使用的頁面標題是否帶有 html 標註, 可以透過編輯功能中的 Source Code 檢查.</li>
-<li><span style="background-color: #ffff99;">H1 標題數量不可過多</span> - 由於 CMSiMDE 的靜態網站支援手機模式, 當頁面 H1 標題數量超過 10 個之後, 頁面標題可能無法在螢幕上最上方以一列顯示, 而是必須出現在第二行, 結果將會導致頁面展開時的 Javascript 程式產生錯亂, 結果為無法直接以滑鼠點擊進入特定頁面.</li>
-</ol>
-<p></p>
-<p></p>
-<br />注意事項 << <a href='注意事項.html'>Previous</a> <a href='靜態網頁 404.html'>Next</a> >> 靜態網頁 404</div>
+    <div id="tipue_search_content">2021.03.02 << <a href='2021.03.02.html'>Previous</a> <a href='2021.03.11.html'>Next</a> >> 2021.03.11<br /><h1>2021.03.04</h1>
+<p><strong>add ssh keys to <a href="https://github.com/settings/keys">https://github.com/settings/keys</a></strong></p>
+<p><strong><code class="js plain">1.建立 OpenSSH key   </code></strong></p>
+<p><strong><code class="js plain"># pairssh-keygen -t rsa -b 4096 -C </code><code class="js string">"使用者學號"</code></strong></p>
+<p><strong><code class="js string">2.Putty 作為 SSH 連線客戶端工具</code></strong></p>
+<p><strong><code class="js string"># <a href="https://www.putty.org/">https://www.putty.org/</a></code></strong></p>
+<p><strong><code class="js string">3.以 SSH 協定與 Github 連線</code></strong></p>
+<p><strong><code class="js string">建立一對 OpenSSH key pair, private key 保留在近端, 將 public key 登記在 Github 所屬帳號設定中</code></strong></p>
+<p><strong># set GIT_SSH=%Disk%:\putty\plink.exe</strong></p>
+<p><strong><code class="js string">表示 git 將透過 putty 工具以 ssh 加密協定對 Github 連線</code></strong></p>
+<p><strong><code class="js string">4.利用 SSH 對 Gitlab 連線</code></strong></p>
+<p><strong><code class="js string">將OpenSSH 格式的 public key 登錄到 Gitlab 帳號下</code></strong></p>
+<p><strong><code class="js string">利用 putty.exe 建立 session 名稱為 github.com 的設定, 其中設定 AUTH 與 Proxy 資料</code></strong></p>
+<p><strong><code class="js string">在.git/config 以url = git@gitlab.com:user_name/url 對 gitlab 連接</code></strong></p>
+<p><strong><code class="js string">---------------------------------------------------------------------------------</code></strong></p>
+<p><strong>ssh:網路連線加密機制,可以利用 ssh 帳號@遠端主機 ip 或符號名稱, 就可以輸入認證密碼, 登入到遠端主機,無須提供密碼認證</strong></p>
+<p><strong><img alt="" height="435" src="https://50733146.github.io/lkh/images/chrome_47BWqXIGHn.png" width="949"/></strong></p>
+<br />2021.03.02 << <a href='2021.03.02.html'>Previous</a> <a href='2021.03.11.html'>Next</a> >> 2021.03.11</div>
         
     <!-- footer -->
       <div class="container">
