@@ -2,7 +2,7 @@
         <head>
         <title>CMSiMDE</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -134,11 +134,54 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='2021.html'>Next</a> >> 2021<br /><h1>倉儲</h1>
-<p><strong>The website is <a href="https://github.com/50733146/lkh-1">https://github.com/50733146/lkh-1</a></strong></p>
-<p><strong>source:<a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a></strong></p>
-<p><strong>#branch 林冠澔 (Lin,Kuan,Hao) <img alt="cool" src="./../cmsimde/static/tinymce4/tinymce/plugins/emoticons/img/smiley-cool.gif"/></strong></p>
-<br /> <a href='2021.html'>Next</a> >> 2021</div>
+    <div id="tipue_search_content">2021.05.13 << <a href='2021.05.13.html'>Previous</a> <a href='2021 P-TECH 暑期實習.html'>Next</a> >> 2021 P-TECH 暑期實習<br /><h1>2021.07.01</h1>
+<ol>
+<li><strong>建立 Heroku 帳號</strong></li>
+<li><strong>建立 Heroku app</strong></li>
+<li><strong>下載 Heroku CLI 程式檔案, 解開至隨身碟 Y: 所在位置或</strong></li>
+<li><strong>修改命令搜尋路徑 --在start.bat中加入:</strong>
+<ul style="list-style-type: disc;">
+<li><strong><code class="py functions"></code><code class="py functions">set</code> <code class="py plain">path_heroku</code><code class="py keyword">=</code><code class="py keyword">%</code><code class="py plain">Disk</code><code class="py keyword">%</code><code class="py plain">:\heroku\</code><code class="py functions">bin</code><code class="py plain">;</code><code class="py plain"></code></strong></li>
+<li><strong><code class="py plain">path<code class="py keyword">=%<code class="py plain">path_heroku</code><code class="py keyword">%</code><code class="py plain">;</code></code></code></strong></li>
+<li><strong><code class="py functions">set</code> <code class="py plain">HTTP_PROXY</code><code class="py keyword">=</code><code class="py plain">http:</code><code class="py keyword">/</code><code class="py keyword">/</code><code class="py plain">[</code><code class="py value">2001</code><code class="py plain">:</code><code class="py value">288</code><code class="py plain">:</code><code class="py value">6004</code><code class="py plain">:</code><code class="py value">17</code><code class="py plain">::</code><code class="py value">53</code><code class="py plain">]:</code><code class="py value">3128</code></strong></li>
+<li><strong><code class="py functions"></code><code class="py functions">set</code> <code class="py plain">HTTPS_PROXY</code><code class="py keyword">=</code><code class="py plain">http:</code><code class="py keyword">/</code><code class="py keyword">/</code><code class="py plain">[</code><code class="py value">2001</code><code class="py plain">:</code><code class="py value">288</code><code class="py plain">:</code><code class="py value">6004</code><code class="py plain">:</code><code class="py value">17</code><code class="py plain">::</code><code class="py value">53</code><code class="py plain">]:</code><code class="py value">3128</code></strong></li>
+</ul>
+</li>
+<li><strong>測試 Heroku </strong>
+<ul style="list-style-type: disc;">
+<li><strong>#heroku --version</strong></li>
+</ul>
+</li>
+<li><strong>設定 Heroku 代理主機</strong>
+<ul style="list-style-type: disc;">
+<li><strong>#heroku login -i</strong></li>
+</ul>
+</li>
+<li><strong>設定同步倉儲,進到倉儲位置下 </strong>
+<ul style="list-style-type: disc;">
+<li><strong>#heroku git:remote -a "heroku app name"</strong></li>
+</ul>
+</li>
+<li><strong>以 git 進行提交推送 </strong>
+<ul style="list-style-type: disc;">
+<li><strong>#git push heroku </strong></li>
+</ul>
+</li>
+</ol>
+<p><strong>---------------------------------------------------</strong></p>
+<p><strong>過程中</strong></p>
+<ul>
+<li><strong>提交推送 #Failed to connect to github.com </strong></li>
+</ul>
+<p><strong>解決</strong></p>
+<ul>
+<li><strong><code>git config --global --unset <code class="py plain">HTTP_PROXY<br/></code></code></strong></li>
+<li><code><strong>git config --global --unset <code class="py plain">HTTPS_PROXY</code><code class="py plain"><br/></code></strong></code></li>
+</ul>
+<p><strong>---------------------------------------------------</strong></p>
+<p><strong>之後heroku login，可直接push heroku同步到<a href="https://git.heroku.com/lkh-1.git">https://git.heroku.com/lkh-1.git</a></strong></p>
+<p><b>Heroku website:<a href="https://dashboard.heroku.com/apps/lkh-1">https://dashboard.heroku.com/apps/lkh-1</a></b></p>
+<pre><code><strong><code class="py plain"> </code></strong></code></pre><br />2021.05.13 << <a href='2021.05.13.html'>Previous</a> <a href='2021 P-TECH 暑期實習.html'>Next</a> >> 2021 P-TECH 暑期實習</div>
         
     <!-- footer -->
       <div class="container">
