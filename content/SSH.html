@@ -2,7 +2,7 @@
         <head>
         <title>CMSiMDE</title>
         <meta charset="utf-8">
-<meta property="head" content="H2">
+<meta property="head" content="H1">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -134,17 +134,21 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">2021.03.11 << <a href='2021.03.11.html'>Previous</a> <a href='2021.05.13.html'>Next</a> >> 2021.05.13<br /><h1>2021.04.28</h1>
-<p><strong>建立Windows系統與Ubuntu系統 </strong></p>
-<p><strong>1.Windows 10專業版</strong></p>
-<p><strong>開機後的網路設置-IPv6</strong><br/><strong>名稱：kmollab</strong></p>
-<p><strong>2.Ubuntu server 20.04-1</strong></p>
-<p><strong>開機後的網路設置-IPv6</strong></p>
-<p><strong>DNS設置-系上配置</strong></p>
-<p><strong>名稱：kmol</strong></p>
-<p><strong>-----------------------</strong></p>
-<p><strong>*預計建立虛擬主機，開機時自動開啟動態、靜態網站</strong></p>
-<br />2021.03.11 << <a href='2021.03.11.html'>Previous</a> <a href='2021.05.13.html'>Next</a> >> 2021.05.13</div>
+    <div id="tipue_search_content">2021.07.01 << <a href='2021.07.01.html'>Previous</a> <a href='Heroku.html'>Next</a> >> Heroku<br /><h1>SSH</h1>
+<p><span style="color: #000000;"><strong><code class="js plain">1.建立 OpenSSH key   </code></strong></span></p>
+<p><span style="color: #000000;"><strong><code class="js plain"># pair ssh-keygen -t rsa -b 4096 -C </code><code class="js string">"使用者學號"</code></strong></span></p>
+<p><span style="color: #000000;"><strong><code class="js string">2.Putty 作為 SSH 連線客戶端工具</code></strong></span></p>
+<p><span style="color: #000000;"><strong><code class="js string"># <a href="https://www.putty.org/" style="color: #000000;">https://www.putty.org/</a></code></strong></span></p>
+<p><span style="color: #000000;"><strong><code class="js string">3.以 SSH 協定與 Github 連線</code></strong></span></p>
+<p><span style="color: #000000;"><strong><code class="js string">建立一對 OpenSSH key pair, private key 保留在近端, 將 public key 登記在 Github 所屬帳號設定中</code></strong></span></p>
+<p><span style="color: #000000;"><strong># set GIT_SSH=%Disk%:\putty\plink.exe</strong></span></p>
+<p><span style="color: #000000;"><strong><code class="js string">表示 git 將透過 putty 工具以 ssh 加密協定對 Github 連線</code></strong></span></p>
+<p><span style="color: #000000;"><strong><code class="js string">4.利用 SSH 對 Gitlab 連線</code></strong></span></p>
+<p><span style="color: #000000;"><strong><code class="js string">將OpenSSH 格式的 public key 登錄到 Gitlab 帳號下</code></strong></span></p>
+<p><span style="color: #000000;"><strong><code class="js string">利用 putty.exe 建立 session 名稱為 github.com 的設定, 其中設定 AUTH 與 Proxy 資料</code></strong></span></p>
+<p><span style="color: #000000;"><strong><code class="js string">在.git/config 以url = git@gitlab.com:user_name/url 對 gitlab 連接</code></strong></span></p>
+<p><span style="color: #000000;"><strong><code class="js string">---------------------------------------------------------------------------------</code></strong></span></p>
+<p><span style="color: #000000;"><strong>ssh:網路連線加密機制,可以利用 ssh 帳號@遠端主機 ip 或符號名稱, 就可以輸入認證密碼, 登入到遠端主機,無須提供密碼認證</strong></span></p><br />2021.07.01 << <a href='2021.07.01.html'>Previous</a> <a href='Heroku.html'>Next</a> >> Heroku</div>
         
     <!-- footer -->
       <div class="container">
