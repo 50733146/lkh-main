@@ -135,7 +135,181 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">程式 << <a href='程式.html'>Previous</a> <a href='Html.html'>Next</a> >> Html<br /><h1>Python</h1>
-<br />程式 << <a href='程式.html'>Previous</a> <a href='Html.html'>Next</a> >> Html</div>
+<p><strong>Python: <a href="https://www.python.org/">https://www.python.org/</a></strong></p>
+<p><strong><span style="background-color: #008000; color: #ffffff;"><a href="https://www.python.org/downloads/release/python-396/" style="background-color: #008000; color: #ffffff;">Download↓</a></span></strong></p>
+<p><strong><span style="background-color: #ffffff; color: #000000;">Visual Studio Code: <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></span></strong></p>
+<p><strong><span style="text-decoration: underline;"><a href="https://code.visualstudio.com/Download"><span style="background-color: #ffffff; color: #000000;"><span style="background-color: #008000; color: #ffffff; text-decoration: underline;">Download↓</span></span></a></span></strong></p>
+<p><strong>----------------------------------------------------</strong></p>
+<p><strong>有序列表:</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">list=[11,22,33,44,55,66]
+print(list[0])
+data=[[1,2,3],[4,5,6]]
+data[0][0:2]=[3,3,3]
+print(data[0])</pre>
+<p><strong>集合、字典的運算:</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">s1={1,2,3,4}
+s2={3,4,5,6}
+s3=s1&amp;s2
+#交集:取相同資料
+s4=s1|s2
+#聯集:區所有資料 但不重複
+s5=s1^s2
+#反交集:取不重複資料
+print(s3)
+print(s4)
+dic={"apple":"蘋果","bug":"錯誤"}
+print(dic)</pre>
+<p><strong>流程控制: if , while , for , break , continue , else</strong></p>
+<p><strong>函數參數定義: def </strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">def io(x,y=0):
+    print(x*y)
+io(2,2)
+io(2)
+def avg(*ns):
+        #*無限數值
+    sum=0
+    for m in ns:
+        sum=sum+m
+    print(sum)
+avg(1,2)
+avg(1,2,3)
+avg(-2,-1,1,2)</pre>
+<p><strong>模組設計與使用:</strong></p>
+<ul>
+<li><strong>模組讀取，import 可以自行創建 or 使用內建模組</strong></li>
+</ul>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import point</pre>
+<p><strong>檔案讀取和儲存:</strong></p>
+<ul>
+<li><strong>方法一</strong></li>
+</ul>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">file=open("data.txt",mode="w",encoding="utf-8")
+file.write("test one more time\n在測試一次",)
+file.close()</pre>
+<ul>
+<li><strong>方法二(較佳)</strong></li>
+</ul>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">with open("data.txt",mode="w",encoding="utf-8") as file:
+    file.write("4\n6")
+sum=0
+with open("data.txt",mode="r",encoding="utf-8") as file:
+    for line in file:
+        sum+=int(line)
+print(sum)
+</pre>
+<p><strong>隨機模組: random</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import random
+#隨機模組
+data=random.choice([100,75,50,25,0])
+#內容隨機
+print(data)
+data1=random.sample([1,2,3,4,5,6],2)
+#內容隨機取多少
+print(data1)
+data2=[0,2,4,6,8,10,]
+random.shuffle(data2)
+#隨機換順序
+print(data2)
+data3=random.random()
+#0~1隨機
+print(data3)
+data4=random.uniform(60,100)
+#設定範圍
+print(data4)
+data5=random.normalvariate(100,10)
+#平均數100 標準差10 多數若在90~100之間
+print(data5)</pre>
+<p><strong>統機模組: statistics as stat</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import statistics as stat 
+#統計模組
+data=stat.mean([1,4,5,8])
+#平均值
+print(data)
+data1=stat.median([1,2,3,4,5,6,7,100])
+#常態分佈
+print(data1)
+data2=stat.stdev([1,2,3,4,5,6,7,8,100])
+#標準差
+print(data2)</pre>
+<p><strong>網路連線、抓取資料:</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import urllib.request as request
+#網路連線
+web="https://ecare.nfu.edu.tw/"
+with request.urlopen(web) as response:
+    data=response.read().decode("utf-8")
+                         #轉"utf-8"
+with open("school.txt","w",encoding="utf-8") as file:
+#創建檔案
+    file.write(data)
+    #寫入
+print(data)</pre>
+<ul>
+<li><strong>抓取json檔案且使用json處理</strong></li>
+</ul>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import urllib.request as request
+#網路連線
+import json
+#json模組 處理資料
+web="https://data.taipei/api/v1/dataset/296acfa2-5d93-4706-ad58-e83cc951863c?scope=resourceAquire"
+with request.urlopen(web) as response:
+    data=json.load(response)
+    #取得資料
+clist=data["result"]["results"]
+with open("data.txt","w",encoding="utf-8") as file:
+#創建檔案
+    for company in clist:
+        file.write(company["公司名稱"]+"\n")
+        #寫入"公司名稱"且換行
+#取得"result" "results"資料
+print(clist)
+for company in clist:
+    print(company["公司名稱"]) 
+    #抓取"公司名稱"資料</pre>
+<p><strong>類別的定義與使用: </strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">class test:
+#定義test
+    test1=["test2","test3"]
+    def read(test4):
+        print("read form",test4)
+print(test.test1)
+#將word送到test4
+test.read("word")</pre>
+<p><strong>實體物件建立與使用: 抓取檔案</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">class file:
+    #初始化
+    def __init__(self,name):
+        self.name=name
+        self.file=None
+    #實體
+    def open(self):
+        self.file=open(self.name,mode="r",encoding="utf-8")
+    def read(self):
+        return self.file.read()
+#讀取
+f1=file("1.txt")
+f1.open()
+data=f1.read()
+print(data) </pre>
+<p><strong>網路爬蟲:</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import urllib.request as req
+url="https://zh.wikipedia.org/wiki/%E5%8F%B0%E7%81%A3%E6%9C%80%E5%A4%A7%E5%85%AC%E5%8F%B8%E5%88%97%E8%A1%A8"
+request=req.Request(url,headers={
+    "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+})
+#讓網站認定是一個正常的使用者 "User-Agent" F12 Headers可以找到
+with req.urlopen(request) as response:
+    data=response.read().decode("utf-8")
+#上傳這個資料
+import bs4
+#解析原始碼
+root=bs4.BeautifulSoup(data,"html.parser")
+titles=root.find_all("td",align="left")
+#尋找 "td"
+for title in titles:
+    if title.a !=None:
+#如果標籤包含a (沒有刪除)
+        print(title.a.string)</pre>
+<p><br/><br/><strong> </strong></p><br />程式 << <a href='程式.html'>Previous</a> <a href='Html.html'>Next</a> >> Html</div>
         
     <!-- footer -->
       <div class="container">
