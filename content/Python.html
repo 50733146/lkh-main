@@ -138,7 +138,9 @@ img.add_border {
 <p><strong>Python: <a href="https://www.python.org/">https://www.python.org/</a></strong></p>
 <p><strong><span style="background-color: #008000; color: #ffffff;"><a href="https://www.python.org/downloads/release/python-396/" style="background-color: #008000; color: #ffffff;">Download↓</a></span></strong></p>
 <p><strong><span style="background-color: #ffffff; color: #000000;">Visual Studio Code: <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></span></strong></p>
-<p><strong><span style="text-decoration: underline;"><a href="https://code.visualstudio.com/Download"><span style="background-color: #ffffff; color: #000000;"><span style="background-color: #008000; color: #ffffff; text-decoration: underline;">Download↓</span></span></a></span></strong></p>
+<p><strong><span style="text-decoration: underline;"><a href="https://code.visualstudio.com/docs/?dv=win64user"><span style="background-color: #ffffff; color: #000000;"><span style="background-color: #008000; color: #ffffff; text-decoration: underline;">Download↓</span></span></a></span></strong></p>
+<p><span style="color: #000000; background-color: #ffffff;"><strong>PyCharm: <a href="https://www.jetbrains.com/pycharm/">https://www.jetbrains.com/pycharm/</a></strong></span></p>
+<p><span style="color: #000000; background-color: #ffffff;"><strong><span style="text-decoration: underline;"><a href="https://www.jetbrains.com/pycharm/download/download-thanks.html?platform=windows&amp;code=PCC"><span style="background-color: #008000; color: #ffffff; text-decoration: underline;">Download↓</span></a></span></strong></span></p>
 <p><strong>----------------------------------------------------</strong></p>
 <p><strong>有序列表:</strong></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">list=[11,22,33,44,55,66]
@@ -219,7 +221,7 @@ print(data4)
 data5=random.normalvariate(100,10)
 #平均數100 標準差10 多數若在90~100之間
 print(data5)</pre>
-<p><strong>統機模組: statistics as stat</strong></p>
+<p><strong>統計模組: statistics as stat</strong></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import statistics as stat 
 #統計模組
 data=stat.mean([1,4,5,8])
@@ -292,7 +294,7 @@ data=f1.read()
 print(data) </pre>
 <p><strong>網路爬蟲:</strong></p>
 <ul>
-<li><strong>Html 網頁 --傳統</strong></li>
+<li><strong>Html網頁--傳統</strong></li>
 </ul>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import urllib.request as req
 url="https://zh.wikipedia.org/wiki/%E5%8F%B0%E7%81%A3%E6%9C%80%E5%A4%A7%E5%85%AC%E5%8F%B8%E5%88%97%E8%A1%A8"
@@ -344,9 +346,8 @@ while count&lt;5:
     pageurl="https://www.ptt.cc"+get(pageurl)
     #執行新網頁
     count+=1</pre>
-<p><br/><br/></p>
 <ul>
-<li><strong>JavaScript 網頁 -AJAX 技術</strong></li>
+<li><strong>JavaScript網頁--AJAX </strong></li>
 </ul>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import urllib.request as req
 url="https://www.kkday.com/zh-tw/home/ajax_get_homepage_setting?csrf_token_name=141080c08072037e2cf75502d694d378"
@@ -365,6 +366,27 @@ for key in posts:
     print(key["name"])
 
 </pre>
+<ul>
+<li><strong>技術複雜的請求--<strong>Request Data、Request Payload、Request Body</strong></strong></li>
+</ul>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import urllib.request as req
+import json
+url="https://medium.com/_/graphql"
+requsetdata={"operationName":"ExtendedFeedQuery","variables":{"items":[{"postId":"6f87d6f613eb","topicId":""},{"postId":"1eead038c372","topicId":""},{"postId":"ec4123afad8f","topicId":""},{"postId":"389033f164c9","topicId":""},{"postId":"dd65342a833f","topicId":""},{"postId":"9988acde29dd","topicId":""},{"postId":"85e0053c9d3f","topicId":""},{"postId":"b5d46e086b25","topicId":""},{"postId":"ea9f39c7460f","topicId":""},{"postId":"63a511f03d26","topicId":""},{"postId":"377857311d79","topicId":""},{"postId":"96162c148aa9","topicId":""},{"postId":"2c32ceb782cf","topicId":""},{"postId":"368edf009a62","topicId":""},{"postId":"1011e50d31ae","topicId":""},{"postId":"23fcc8772bb3","topicId":""},{"postId":"64d7129fc066","topicId":""},{"postId":"596818712bb6","topicId":""},{"postId":"5316e9337ec4","topicId":""},{"postId":"f20b9367cd52","topicId":""}]},"query":"query ExtendedFeedQuery($items: [ExtendedFeedItemOptions!]!) {\n  extendedFeedItems(items: $items) {\n    post {\n      ...PostListModulePostPreviewData\n      __typename\n    }\n    metadata {\n      topic {\n        id\n        name\n        __typename\n      }\n      __typename\n    }\n    __typename\n  }\n}\n\nfragment PostListModulePostPreviewData on Post {\n  id\n  firstPublishedAt\n  readingTime\n  createdAt\n  mediumUrl\n  previewImage {\n    id\n    __typename\n  }\n  title\n  collection {\n    id\n    domain\n    slug\n    name\n    navItems {\n      url\n      __typename\n    }\n    logo {\n      id\n      __typename\n    }\n    avatar {\n      id\n      __typename\n    }\n    __typename\n  }\n  creator {\n    id\n    name\n    username\n    imageId\n    mediumMemberAt\n    ...userUrl_user\n    __typename\n  }\n  visibility\n  isProxyPost\n  isLocked\n  ...HomeFeedItem_post\n  ...HomeReadingListItem_post\n  ...HomeTrendingModule_post\n  __typename\n}\n\nfragment HomeFeedItem_post on Post {\n  __typename\n  id\n  title\n  firstPublishedAt\n  mediumUrl\n  collection {\n    id\n    name\n    domain\n    logo {\n      id\n      __typename\n    }\n    __typename\n  }\n  creator {\n    id\n    name\n    username\n    imageId\n    mediumMemberAt\n    __typename\n  }\n  previewImage {\n    id\n    __typename\n  }\n  previewContent {\n    subtitle\n    __typename\n  }\n  readingTime\n  tags {\n    ...TopicPill_tag\n    __typename\n  }\n  ...BookmarkButton_post\n  ...CreatorActionOverflowPopover_post\n  ...PostPresentationTracker_post\n  ...PostPreviewAvatar_post\n}\n\nfragment TopicPill_tag on Tag {\n  __typename\n  id\n  displayTitle\n}\n\nfragment BookmarkButton_post on Post {\n  ...SusiClickable_post\n  ...WithSetReadingList_post\n  ...AddToCatalogBookmarkButton_post\n  __typename\n  id\n}\n\nfragment SusiClickable_post on Post {\n  id\n  mediumUrl\n  ...SusiContainer_post\n  __typename\n}\n\nfragment SusiContainer_post on Post {\n  id\n  __typename\n}\n\nfragment WithSetReadingList_post on Post {\n  ...ReadingList_post\n  __typename\n  id\n}\n\nfragment ReadingList_post on Post {\n  __typename\n  id\n  viewerEdge {\n    id\n    readingList\n    __typename\n  }\n}\n\nfragment AddToCatalogBookmarkButton_post on Post {\n  ...AddToCatalogBase_post\n  __typename\n  id\n}\n\nfragment AddToCatalogBase_post on Post {\n  id\n  viewerEdge {\n    catalogsConnection {\n      catalogsContainingThis(type: LISTS) {\n        catalogId\n        catalogItemIds\n        __typename\n      }\n      predefinedContainingThis {\n        catalogId\n        predefined\n        catalogItemIds\n        __typename\n      }\n      __typename\n    }\n    ...editCatalogItemsMutation_postViewerEdge\n    ...useAddItemToPredefinedCatalog_postViewerEdge\n    __typename\n    id\n  }\n  ...WithToggleInsideCatalog_post\n  __typename\n}\n\nfragment useAddItemToPredefinedCatalog_postViewerEdge on PostViewerEdge {\n  id\n  catalogsConnection {\n    predefinedContainingThis {\n      catalogId\n      version\n      predefined\n      catalogItemIds\n      __typename\n    }\n    __typename\n  }\n  __typename\n}\n\nfragment editCatalogItemsMutation_postViewerEdge on PostViewerEdge {\n  id\n  catalogsConnection {\n    catalogsContainingThis(type: LISTS) {\n      catalogId\n      version\n      catalogItemIds\n      __typename\n    }\n    predefinedContainingThis {\n      catalogId\n      predefined\n      version\n      catalogItemIds\n      __typename\n    }\n    __typename\n  }\n  __typename\n}\n\nfragment WithToggleInsideCatalog_post on Post {\n  id\n  viewerEdge {\n    catalogsConnection {\n      catalogsContainingThis(type: LISTS) {\n        catalogId\n        __typename\n      }\n      predefinedContainingThis {\n        predefined\n        __typename\n      }\n      __typename\n    }\n    __typename\n    id\n  }\n  __typename\n}\n\nfragment CreatorActionOverflowPopover_post on Post {\n  allowResponses\n  id\n  statusForCollection\n  isLocked\n  isPublished\n  clapCount\n  mediumUrl\n  pinnedAt\n  pinnedByCreatorAt\n  curationEligibleAt\n  mediumUrl\n  responseDistribution\n  visibility\n  ...useIsPinnedInContext_post\n  pendingCollection {\n    id\n    name\n    creator {\n      id\n      __typename\n    }\n    avatar {\n      id\n      __typename\n    }\n    domain\n    slug\n    __typename\n  }\n  creator {\n    id\n    ...MutePopoverOptions_creator\n    ...auroraHooks_publisher\n    __typename\n  }\n  collection {\n    id\n    name\n    creator {\n      id\n      __typename\n    }\n    avatar {\n      id\n      __typename\n    }\n    domain\n    slug\n    ...MutePopoverOptions_collection\n    ...auroraHooks_publisher\n    __typename\n  }\n  ...ClapMutation_post\n  __typename\n}\n\nfragment MutePopoverOptions_creator on User {\n  id\n  __typename\n}\n\nfragment MutePopoverOptions_collection on Collection {\n  id\n  __typename\n}\n\nfragment ClapMutation_post on Post {\n  __typename\n  id\n  clapCount\n  ...MultiVoteCount_post\n}\n\nfragment MultiVoteCount_post on Post {\n  id\n  ...PostVotersNetwork_post\n  __typename\n}\n\nfragment PostVotersNetwork_post on Post {\n  id\n  voterCount\n  recommenders {\n    name\n    __typename\n  }\n  __typename\n}\n\nfragment useIsPinnedInContext_post on Post {\n  id\n  collection {\n    id\n    __typename\n  }\n  pendingCollection {\n    id\n    __typename\n  }\n  pinnedAt\n  pinnedByCreatorAt\n  __typename\n}\n\nfragment auroraHooks_publisher on Publisher {\n  __typename\n  ... on Collection {\n    isAuroraEligible\n    isAuroraVisible\n    viewerEdge {\n      id\n      isEditor\n      __typename\n    }\n    __typename\n    id\n  }\n  ... on User {\n    isAuroraVisible\n    __typename\n    id\n  }\n}\n\nfragment PostPresentationTracker_post on Post {\n  id\n  visibility\n  previewContent {\n    isFullContent\n    __typename\n  }\n  collection {\n    id\n    slug\n    __typename\n  }\n  __typename\n}\n\nfragment PostPreviewAvatar_post on Post {\n  __typename\n  id\n  collection {\n    id\n    name\n    ...CollectionAvatar_collection\n    ...collectionUrl_collection\n    __typename\n  }\n  creator {\n    id\n    username\n    name\n    ...UserAvatar_user\n    ...userUrl_user\n    __typename\n  }\n}\n\nfragment CollectionAvatar_collection on Collection {\n  name\n  avatar {\n    id\n    __typename\n  }\n  ...collectionUrl_collection\n  __typename\n  id\n}\n\nfragment collectionUrl_collection on Collection {\n  id\n  domain\n  slug\n  __typename\n}\n\nfragment UserAvatar_user on User {\n  __typename\n  username\n  id\n  name\n  imageId\n  mediumMemberAt\n  ...userUrl_user\n}\n\nfragment userUrl_user on User {\n  __typename\n  id\n  customDomainState {\n    live {\n      domain\n      __typename\n    }\n    __typename\n  }\n  username\n  hasSubdomain\n}\n\nfragment HomeReadingListItem_post on Post {\n  id\n  title\n  creator {\n    id\n    name\n    username\n    ...UserAvatar_user\n    __typename\n  }\n  mediumUrl\n  createdAt\n  readingTime\n  collection {\n    id\n    name\n    navItems {\n      url\n      __typename\n    }\n    ...CollectionAvatar_collection\n    __typename\n  }\n  visibility\n  __typename\n}\n\nfragment HomeTrendingModule_post on Post {\n  id\n  ...HomeTrendingPostPreview_post\n  __typename\n}\n\nfragment HomeTrendingPostPreview_post on Post {\n  id\n  title\n  mediumUrl\n  readingTime\n  firstPublishedAt\n  ...PostPreviewAvatar_post\n  ...PostPresentationTracker_post\n  __typename\n}\n"}
+#複雜的請求 在Request Payload "view source" 可找到 給網站訊息
+request=req.Request(url,headers={
+        "Content-type":"application/json",
+        #在Request Headers
+        "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"}, data=json.dumps(requsetdata).encode("utf-8"))
+with req.urlopen(request) as response:
+        result=response.read().decode("utf-8")
+result=json.loads(result)
+titles=result["data"]["extendedFeedItems"]
+for title in titles:
+#連續讀取
+        print(title["post"]["title"])
+</pre>
+<p><br/><br/><br/></p>
 <p><br/><br/><strong> </strong></p><br />程式 << <a href='程式.html'>Previous</a> <a href='Html.html'>Next</a> >> Html</div>
         
     <!-- footer -->
