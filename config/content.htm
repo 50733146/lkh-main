@@ -473,7 +473,22 @@ for title in titles:
 #連續讀取
         print(title["post"]["title"])
 </pre>
-<p><br/><br/><br/></p>
+<p><strong>Email 發送電子郵件</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import email.message
+msg=email.message.EmailMessage()
+msg["from"]="寄件人"
+msg["to"]="收件人"
+msg["subject"]="主旨"
+msg.set_content("test")
+#msg 送出資訊與內容
+import smtplib
+#到網路收尋 gmail.smtp server 或是其他 ex:yahoo...
+server=smtplib.SMTP_SSL("smtp.gmail.com", 465)
+server.login("帳號", "密碼")
+#填入帳號密碼登入
+server.send_message(msg)
+server.close</pre>
+<p><br/><br/><br/><br/></p>
 <p><br/><br/><strong> </strong></p><h2>Html</h2>
 <p></p>
 <p><svg height="20" width="92" xmlns="http://www.w3.org/2000/svg"><lineargradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"></stop><stop offset="1" stop-opacity=".1"></stop></lineargradient><mask id="a"><rect fill="#fff" height="20" rx="3" width="92"></rect></mask><g mask="url(#a)"><path d="M0 0h34v20H0z" fill="#555"></path><path d="M34 0h58v20H34z" fill="#46BC99"></path><path d="M0 0h92v20H0z" fill="url(#b)"></path></g><g fill="#fff" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11" text-anchor="middle"><text fill="#010101" fill-opacity=".3" x="17" y="15">chat</text><text x="17" y="14">web</text><text fill="#010101" fill-opacity=".3" x="62" y="15">on LKH</text><text x="62" y="14">on LKH</text></g></svg></p>

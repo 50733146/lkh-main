@@ -386,7 +386,22 @@ for title in titles:
 #連續讀取
         print(title["post"]["title"])
 </pre>
-<p><br/><br/><br/></p>
+<p><strong>Email 發送電子郵件</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import email.message
+msg=email.message.EmailMessage()
+msg["from"]="寄件人"
+msg["to"]="收件人"
+msg["subject"]="主旨"
+msg.set_content("test")
+#msg 送出資訊與內容
+import smtplib
+#到網路收尋 gmail.smtp server 或是其他 ex:yahoo...
+server=smtplib.SMTP_SSL("smtp.gmail.com", 465)
+server.login("帳號", "密碼")
+#填入帳號密碼登入
+server.send_message(msg)
+server.close</pre>
+<p><br/><br/><br/><br/></p>
 <p><br/><br/><strong> </strong></p><br />程式 << <a href='程式.html'>Previous</a> <a href='Html.html'>Next</a> >> Html</div>
         
     <!-- footer -->
