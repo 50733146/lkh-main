@@ -1,0 +1,315 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>CMSiMDE</title>
+        <meta charset="utf-8">
+<meta property="head" content="H3">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>LKH</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">LKH</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li><a href='倉儲.html'>倉儲</a><li class='has-children'><a href='2021.html'>2021</a><ul class='dropdown'><li><a href='2021.03.02.html'>2021.03.02</a><li><a href='2021.03.04.html'>2021.03.04</a><li><a href='2021.03.11.html'>2021.03.11</a><li><a href='2021.04.28.html'>2021.04.28</a><li><a href='2021.05.13.html'>2021.05.13</a><li><a href='2021.07.01.html'>2021.07.01</a><li><a href='2021.07.02.html'>2021.07.02</a><li><a href='2021.07.03.html'>2021.07.03</a></li></ul><li><a href='SSH.html'>SSH</a><li><a href='Heroku.html'>Heroku</a><li><a href='LaTeX.html'>LaTeX</a><li><a href='2021 P-TECH 暑期實習.html'>2021 P-TECH 暑期實習</a><li class='has-children'><a href='插大.html'>插大</a><ul class='dropdown'><li><a href='國立普通大學.html'>國立普通大學</a><li><a href='國立科技大學.html'>國立科技大學</a><li><a href='私立普通大學.html'>私立普通大學</a><li><a href='私立科技大學.html'>私立科技大學</a></li></ul><li class='has-children'><a href='程式.html'>程式</a><ul class='dropdown'><li class='has-children'><a href='Python.html'>Python</a><ul class='dropdown'><li><a href='入門.html'>入門</a><li><a href='網路爬蟲.html'>網路爬蟲</a><li><a href='Email 發送電子郵件.html'>Email 發送電子郵件</a><li><a href='Flask 網站開發.html'>Flask 網站開發</a><li><a href='Pandas 資料分析.html'>Pandas 資料分析</a><li><a href='Numpy.html'>Numpy</a></li></ul><li><a href='Html.html'>Html</a><li><a href='Java.html'>Java</a><li><a href='SQL.html'>SQL</a><li><a href='C++.html'>C++</a><li><a href='C#.html'>C#</a></li></ul><li><a href='Tensorflow.html'>Tensorflow</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">入門 << <a href='入門.html'>Previous</a> <a href='Email 發送電子郵件.html'>Next</a> >> Email 發送電子郵件<br /><h1>網路爬蟲</h1>
+<p><strong>網路連線、抓取資料:</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import urllib.request as request
+#網路連線
+web="https://ecare.nfu.edu.tw/"
+with request.urlopen(web) as response:
+    data=response.read().decode("utf-8")
+                         #轉"utf-8"
+with open("school.txt","w",encoding="utf-8") as file:
+#創建檔案
+    file.write(data)
+    #寫入
+print(data)</pre>
+<ul>
+<li><strong>抓取json檔案且使用json處理</strong></li>
+</ul>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import urllib.request as request
+#網路連線
+import json
+#json模組 處理資料
+web="https://data.taipei/api/v1/dataset/296acfa2-5d93-4706-ad58-e83cc951863c?scope=resourceAquire"
+with request.urlopen(web) as response:
+    data=json.load(response)
+    #取得資料
+clist=data["result"]["results"]
+with open("data.txt","w",encoding="utf-8") as file:
+#創建檔案
+    for company in clist:
+        file.write(company["公司名稱"]+"\n")
+        #寫入"公司名稱"且換行
+#取得"result" "results"資料
+print(clist)
+for company in clist:
+    print(company["公司名稱"]) 
+    #抓取"公司名稱"資料</pre>
+<ul>
+<li><strong>Html網頁--傳統</strong></li>
+</ul>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import urllib.request as req
+url="https://zh.wikipedia.org/wiki/%E5%8F%B0%E7%81%A3%E6%9C%80%E5%A4%A7%E5%85%AC%E5%8F%B8%E5%88%97%E8%A1%A8"
+request=req.Request(url,headers={
+    "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+})
+#讓網站認定是一個正常的使用者 "User-Agent" F12 Headers可以找到
+with req.urlopen(request) as response:
+    data=response.read().decode("utf-8")
+#上傳這個資料
+import bs4
+#解析原始碼
+root=bs4.BeautifulSoup(data,"html.parser")
+titles=root.find_all("td",align="left")
+#尋找 "td"
+for title in titles:
+    if title.a !=None:
+#如果標籤包含a (沒有刪除)
+        print(title.a.string)</pre>
+<ul>
+<li><strong>cookie操作、抓取多個頁面</strong></li>
+</ul>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import urllib.request as req
+def get(url):
+    request=req.Request(url,headers={
+        "cookie":"over18=1",
+        #讓網站確認符合規則(是否18歲)
+        "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+    })
+    #讓網站認定是一個正常的使用者 "User-Agent" F12 Headers可以找到
+    with req.urlopen(request) as response:
+        data=response.read().decode("utf-8")
+    #上傳這個資料
+    import bs4
+    #解析原始碼
+    root=bs4.BeautifulSoup(data,"html.parser")
+    titles=root.find_all("div",class_="title")
+    print("page",count+1)
+    for title in titles:
+        if title.a != None:
+            print(title.a.string)
+    next=root.find("a",string="‹ 上頁")
+    return next["href"]
+    #把網址丟出去
+pageurl="https://www.ptt.cc/bbs/Gossiping/index.html"
+count=0
+while count&lt;5:
+#抓5頁
+    pageurl="https://www.ptt.cc"+get(pageurl)
+    #執行新網頁
+    count+=1</pre>
+<ul>
+<li><strong>JavaScript網頁--AJAX </strong></li>
+</ul>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import urllib.request as req
+url="https://www.kkday.com/zh-tw/home/ajax_get_homepage_setting?csrf_token_name=141080c08072037e2cf75502d694d378"
+request=req.Request(url,headers={
+    "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+})
+#讓網站認定是一個正常的使用者 "User-Agent" F12 Headers可以找到
+with req.urlopen(request) as response:
+    data=response.read().decode("utf-8")
+#上傳這個資料
+import json
+#解析 json格式
+data=json.loads(data)
+posts=data["data"]["top_products"]["prod_list"]
+for key in posts:
+    print(key["name"])
+
+</pre>
+<ul>
+<li><strong>技術複雜的請求--<strong>Request Data、Request Payload、Request Body</strong></strong></li>
+</ul>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import urllib.request as req
+import json
+url="https://medium.com/_/graphql"
+requsetdata={"operationName":"ExtendedFeedQuery","variables":{"items":[{"postId":"6f87d6f613eb","topicId":""},{"postId":"1eead038c372","topicId":""},{"postId":"ec4123afad8f","topicId":""},{"postId":"389033f164c9","topicId":""},{"postId":"dd65342a833f","topicId":""},{"postId":"9988acde29dd","topicId":""},{"postId":"85e0053c9d3f","topicId":""},{"postId":"b5d46e086b25","topicId":""},{"postId":"ea9f39c7460f","topicId":""},{"postId":"63a511f03d26","topicId":""},{"postId":"377857311d79","topicId":""},{"postId":"96162c148aa9","topicId":""},{"postId":"2c32ceb782cf","topicId":""},{"postId":"368edf009a62","topicId":""},{"postId":"1011e50d31ae","topicId":""},{"postId":"23fcc8772bb3","topicId":""},{"postId":"64d7129fc066","topicId":""},{"postId":"596818712bb6","topicId":""},{"postId":"5316e9337ec4","topicId":""},{"postId":"f20b9367cd52","topicId":""}]},"query":"query ExtendedFeedQuery($items: [ExtendedFeedItemOptions!]!) {\n  extendedFeedItems(items: $items) {\n    post {\n      ...PostListModulePostPreviewData\n      __typename\n    }\n    metadata {\n      topic {\n        id\n        name\n        __typename\n      }\n      __typename\n    }\n    __typename\n  }\n}\n\nfragment PostListModulePostPreviewData on Post {\n  id\n  firstPublishedAt\n  readingTime\n  createdAt\n  mediumUrl\n  previewImage {\n    id\n    __typename\n  }\n  title\n  collection {\n    id\n    domain\n    slug\n    name\n    navItems {\n      url\n      __typename\n    }\n    logo {\n      id\n      __typename\n    }\n    avatar {\n      id\n      __typename\n    }\n    __typename\n  }\n  creator {\n    id\n    name\n    username\n    imageId\n    mediumMemberAt\n    ...userUrl_user\n    __typename\n  }\n  visibility\n  isProxyPost\n  isLocked\n  ...HomeFeedItem_post\n  ...HomeReadingListItem_post\n  ...HomeTrendingModule_post\n  __typename\n}\n\nfragment HomeFeedItem_post on Post {\n  __typename\n  id\n  title\n  firstPublishedAt\n  mediumUrl\n  collection {\n    id\n    name\n    domain\n    logo {\n      id\n      __typename\n    }\n    __typename\n  }\n  creator {\n    id\n    name\n    username\n    imageId\n    mediumMemberAt\n    __typename\n  }\n  previewImage {\n    id\n    __typename\n  }\n  previewContent {\n    subtitle\n    __typename\n  }\n  readingTime\n  tags {\n    ...TopicPill_tag\n    __typename\n  }\n  ...BookmarkButton_post\n  ...CreatorActionOverflowPopover_post\n  ...PostPresentationTracker_post\n  ...PostPreviewAvatar_post\n}\n\nfragment TopicPill_tag on Tag {\n  __typename\n  id\n  displayTitle\n}\n\nfragment BookmarkButton_post on Post {\n  ...SusiClickable_post\n  ...WithSetReadingList_post\n  ...AddToCatalogBookmarkButton_post\n  __typename\n  id\n}\n\nfragment SusiClickable_post on Post {\n  id\n  mediumUrl\n  ...SusiContainer_post\n  __typename\n}\n\nfragment SusiContainer_post on Post {\n  id\n  __typename\n}\n\nfragment WithSetReadingList_post on Post {\n  ...ReadingList_post\n  __typename\n  id\n}\n\nfragment ReadingList_post on Post {\n  __typename\n  id\n  viewerEdge {\n    id\n    readingList\n    __typename\n  }\n}\n\nfragment AddToCatalogBookmarkButton_post on Post {\n  ...AddToCatalogBase_post\n  __typename\n  id\n}\n\nfragment AddToCatalogBase_post on Post {\n  id\n  viewerEdge {\n    catalogsConnection {\n      catalogsContainingThis(type: LISTS) {\n        catalogId\n        catalogItemIds\n        __typename\n      }\n      predefinedContainingThis {\n        catalogId\n        predefined\n        catalogItemIds\n        __typename\n      }\n      __typename\n    }\n    ...editCatalogItemsMutation_postViewerEdge\n    ...useAddItemToPredefinedCatalog_postViewerEdge\n    __typename\n    id\n  }\n  ...WithToggleInsideCatalog_post\n  __typename\n}\n\nfragment useAddItemToPredefinedCatalog_postViewerEdge on PostViewerEdge {\n  id\n  catalogsConnection {\n    predefinedContainingThis {\n      catalogId\n      version\n      predefined\n      catalogItemIds\n      __typename\n    }\n    __typename\n  }\n  __typename\n}\n\nfragment editCatalogItemsMutation_postViewerEdge on PostViewerEdge {\n  id\n  catalogsConnection {\n    catalogsContainingThis(type: LISTS) {\n      catalogId\n      version\n      catalogItemIds\n      __typename\n    }\n    predefinedContainingThis {\n      catalogId\n      predefined\n      version\n      catalogItemIds\n      __typename\n    }\n    __typename\n  }\n  __typename\n}\n\nfragment WithToggleInsideCatalog_post on Post {\n  id\n  viewerEdge {\n    catalogsConnection {\n      catalogsContainingThis(type: LISTS) {\n        catalogId\n        __typename\n      }\n      predefinedContainingThis {\n        predefined\n        __typename\n      }\n      __typename\n    }\n    __typename\n    id\n  }\n  __typename\n}\n\nfragment CreatorActionOverflowPopover_post on Post {\n  allowResponses\n  id\n  statusForCollection\n  isLocked\n  isPublished\n  clapCount\n  mediumUrl\n  pinnedAt\n  pinnedByCreatorAt\n  curationEligibleAt\n  mediumUrl\n  responseDistribution\n  visibility\n  ...useIsPinnedInContext_post\n  pendingCollection {\n    id\n    name\n    creator {\n      id\n      __typename\n    }\n    avatar {\n      id\n      __typename\n    }\n    domain\n    slug\n    __typename\n  }\n  creator {\n    id\n    ...MutePopoverOptions_creator\n    ...auroraHooks_publisher\n    __typename\n  }\n  collection {\n    id\n    name\n    creator {\n      id\n      __typename\n    }\n    avatar {\n      id\n      __typename\n    }\n    domain\n    slug\n    ...MutePopoverOptions_collection\n    ...auroraHooks_publisher\n    __typename\n  }\n  ...ClapMutation_post\n  __typename\n}\n\nfragment MutePopoverOptions_creator on User {\n  id\n  __typename\n}\n\nfragment MutePopoverOptions_collection on Collection {\n  id\n  __typename\n}\n\nfragment ClapMutation_post on Post {\n  __typename\n  id\n  clapCount\n  ...MultiVoteCount_post\n}\n\nfragment MultiVoteCount_post on Post {\n  id\n  ...PostVotersNetwork_post\n  __typename\n}\n\nfragment PostVotersNetwork_post on Post {\n  id\n  voterCount\n  recommenders {\n    name\n    __typename\n  }\n  __typename\n}\n\nfragment useIsPinnedInContext_post on Post {\n  id\n  collection {\n    id\n    __typename\n  }\n  pendingCollection {\n    id\n    __typename\n  }\n  pinnedAt\n  pinnedByCreatorAt\n  __typename\n}\n\nfragment auroraHooks_publisher on Publisher {\n  __typename\n  ... on Collection {\n    isAuroraEligible\n    isAuroraVisible\n    viewerEdge {\n      id\n      isEditor\n      __typename\n    }\n    __typename\n    id\n  }\n  ... on User {\n    isAuroraVisible\n    __typename\n    id\n  }\n}\n\nfragment PostPresentationTracker_post on Post {\n  id\n  visibility\n  previewContent {\n    isFullContent\n    __typename\n  }\n  collection {\n    id\n    slug\n    __typename\n  }\n  __typename\n}\n\nfragment PostPreviewAvatar_post on Post {\n  __typename\n  id\n  collection {\n    id\n    name\n    ...CollectionAvatar_collection\n    ...collectionUrl_collection\n    __typename\n  }\n  creator {\n    id\n    username\n    name\n    ...UserAvatar_user\n    ...userUrl_user\n    __typename\n  }\n}\n\nfragment CollectionAvatar_collection on Collection {\n  name\n  avatar {\n    id\n    __typename\n  }\n  ...collectionUrl_collection\n  __typename\n  id\n}\n\nfragment collectionUrl_collection on Collection {\n  id\n  domain\n  slug\n  __typename\n}\n\nfragment UserAvatar_user on User {\n  __typename\n  username\n  id\n  name\n  imageId\n  mediumMemberAt\n  ...userUrl_user\n}\n\nfragment userUrl_user on User {\n  __typename\n  id\n  customDomainState {\n    live {\n      domain\n      __typename\n    }\n    __typename\n  }\n  username\n  hasSubdomain\n}\n\nfragment HomeReadingListItem_post on Post {\n  id\n  title\n  creator {\n    id\n    name\n    username\n    ...UserAvatar_user\n    __typename\n  }\n  mediumUrl\n  createdAt\n  readingTime\n  collection {\n    id\n    name\n    navItems {\n      url\n      __typename\n    }\n    ...CollectionAvatar_collection\n    __typename\n  }\n  visibility\n  __typename\n}\n\nfragment HomeTrendingModule_post on Post {\n  id\n  ...HomeTrendingPostPreview_post\n  __typename\n}\n\nfragment HomeTrendingPostPreview_post on Post {\n  id\n  title\n  mediumUrl\n  readingTime\n  firstPublishedAt\n  ...PostPreviewAvatar_post\n  ...PostPresentationTracker_post\n  __typename\n}\n"}
+#複雜的請求 在Request Payload "view source" 可找到 給網站訊息
+request=req.Request(url,headers={
+        "Content-type":"application/json",
+        #在Request Headers
+        "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"}, data=json.dumps(requsetdata).encode("utf-8"))
+with req.urlopen(request) as response:
+        result=response.read().decode("utf-8")
+result=json.loads(result)
+titles=result["data"]["extendedFeedItems"]
+for title in titles:
+#連續讀取
+        print(title["post"]["title"])
+</pre>
+<br />入門 << <a href='入門.html'>Previous</a> <a href='Email 發送電子郵件.html'>Next</a> >> Email 發送電子郵件</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        

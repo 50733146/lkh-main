@@ -2,7 +2,7 @@
         <head>
         <title>CMSiMDE</title>
         <meta charset="utf-8">
-<meta property="head" content="H2">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -134,17 +134,149 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">2021.03.11 << <a href='2021.03.11.html'>Previous</a> <a href='2021.05.13.html'>Next</a> >> 2021.05.13<br /><h1>2021.04.28</h1>
-<p><strong>建立Windows系統與Ubuntu系統 </strong></p>
-<p><strong>1.Windows 10專業版</strong></p>
-<p><strong>開機後的網路設置-IPv6</strong><br/><strong>名稱：kmollab</strong></p>
-<p><strong>2.Ubuntu server 20.04-1</strong></p>
-<p><strong>開機後的網路設置-IPv6</strong></p>
-<p><strong>DNS設置-系上配置</strong></p>
-<p><strong>名稱：kmol</strong></p>
-<p><strong><span>--------------------------------------------------------------------------------------------------</span></strong></p>
-<p><strong>*預計建立虛擬主機，開機時自動開啟動態、靜態網站</strong></p>
-<br />2021.03.11 << <a href='2021.03.11.html'>Previous</a> <a href='2021.05.13.html'>Next</a> >> 2021.05.13</div>
+    <div id="tipue_search_content">Python << <a href='Python.html'>Previous</a> <a href='網路爬蟲.html'>Next</a> >> 網路爬蟲<br /><h1>入門</h1>
+<p><strong>有序列表:</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">list=[11,22,33,44,55,66]
+print(list[0])
+data=[[1,2,3],[4,5,6]]
+data[0][0:2]=[3,3,3]
+print(data[0])</pre>
+<p><strong>集合、字典的運算:</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">s1={1,2,3,4}
+s2={3,4,5,6}
+s3=s1&amp;s2
+#交集:取相同資料
+s4=s1|s2
+#聯集:區所有資料 但不重複
+s5=s1^s2
+#反交集:取不重複資料
+print(s3)
+print(s4)
+dic={"apple":"蘋果","bug":"錯誤"}
+print(dic)</pre>
+<p><strong>流程控制: if , while , for , break , continue , else</strong></p>
+<p><strong>函數參數定義: def </strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">def io(x,y=0):
+    print(x*y)
+io(2,2)
+io(2)
+def avg(*ns):
+        #*無限數值
+    sum=0
+    for m in ns:
+        sum=sum+m
+    print(sum)
+avg(1,2)
+avg(1,2,3)
+avg(-2,-1,1,2)</pre>
+<p><strong>模組設計與使用:</strong></p>
+<ul>
+<li><strong>模組讀取，import 可以自行創建 or 使用內建模組</strong></li>
+</ul>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import point</pre>
+<p><strong>檔案讀取和儲存:</strong></p>
+<ul>
+<li><strong>方法一</strong></li>
+</ul>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">file=open("data.txt",mode="w",encoding="utf-8")
+file.write("test one more time\n在測試一次",)
+file.close()</pre>
+<ul>
+<li><strong>方法二(較佳)</strong></li>
+</ul>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">with open("data.txt",mode="w",encoding="utf-8") as file:
+    file.write("4\n6")
+sum=0
+with open("data.txt",mode="r",encoding="utf-8") as file:
+    for line in file:
+        sum+=int(line)
+print(sum)
+</pre>
+<p><strong>隨機模組: random</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import random
+#隨機模組
+data=random.choice([100,75,50,25,0])
+#內容隨機
+print(data)
+data1=random.sample([1,2,3,4,5,6],2)
+#內容隨機取多少
+print(data1)
+data2=[0,2,4,6,8,10,]
+random.shuffle(data2)
+#隨機換順序
+print(data2)
+data3=random.random()
+#0~1隨機
+print(data3)
+data4=random.uniform(60,100)
+#設定範圍
+print(data4)
+data5=random.normalvariate(100,10)
+#平均數100 標準差10 多數若在90~100之間
+print(data5)</pre>
+<p><strong>統計模組: statistics as stat</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import statistics as stat 
+#統計模組
+data=stat.mean([1,4,5,8])
+#平均值
+print(data)
+data1=stat.median([1,2,3,4,5,6,7,100])
+#常態分佈
+print(data1)
+data2=stat.stdev([1,2,3,4,5,6,7,8,100])
+#標準差
+print(data2)</pre>
+<p><strong>類別的定義與使用: </strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">class test:
+#定義test
+    test1=["test2","test3"]
+    def read(test4):
+        print("read form",test4)
+print(test.test1)
+#將word送到test4
+test.read("word")</pre>
+<p><strong>實體物件建立與使用: 抓取檔案</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">class file:
+    #初始化
+    def __init__(self,name):
+        self.name=name
+        self.file=None
+    #實體
+    def open(self):
+        self.file=open(self.name,mode="r",encoding="utf-8")
+    def read(self):
+        return self.file.read()
+#讀取
+f1=file("1.txt")
+f1.open()
+data=f1.read()
+print(data) </pre>
+<p><strong>類別的定義與使用: </strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">class test:
+#定義test
+    test1=["test2","test3"]
+    def read(test4):
+        print("read form",test4)
+print(test.test1)
+#將word送到test4
+test.read("word")</pre>
+<p><strong>實體物件建立與使用: 抓取檔案</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">class file:
+    #初始化
+    def __init__(self,name):
+        self.name=name
+        self.file=None
+    #實體
+    def open(self):
+        self.file=open(self.name,mode="r",encoding="utf-8")
+    def read(self):
+        return self.file.read()
+#讀取
+f1=file("1.txt")
+f1.open()
+data=f1.read()
+print(data) </pre>
+<br />Python << <a href='Python.html'>Previous</a> <a href='網路爬蟲.html'>Next</a> >> 網路爬蟲</div>
         
     <!-- footer -->
       <div class="container">

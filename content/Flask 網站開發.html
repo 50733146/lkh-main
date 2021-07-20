@@ -2,7 +2,7 @@
         <head>
         <title>CMSiMDE</title>
         <meta charset="utf-8">
-<meta property="head" content="H2">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -134,17 +134,62 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">2021.03.11 << <a href='2021.03.11.html'>Previous</a> <a href='2021.05.13.html'>Next</a> >> 2021.05.13<br /><h1>2021.04.28</h1>
-<p><strong>建立Windows系統與Ubuntu系統 </strong></p>
-<p><strong>1.Windows 10專業版</strong></p>
-<p><strong>開機後的網路設置-IPv6</strong><br/><strong>名稱：kmollab</strong></p>
-<p><strong>2.Ubuntu server 20.04-1</strong></p>
-<p><strong>開機後的網路設置-IPv6</strong></p>
-<p><strong>DNS設置-系上配置</strong></p>
-<p><strong>名稱：kmol</strong></p>
+    <div id="tipue_search_content">Email 發送電子郵件 << <a href='Email 發送電子郵件.html'>Previous</a> <a href='Pandas 資料分析.html'>Next</a> >> Pandas 資料分析<br /><h1>Flask 網站開發</h1>
+<ul>
+<li>app.py</li>
+</ul>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">from flask import Flask
+app = Flask(__name__)
+@app.route('/')
+def hello():
+    return 'hello man'
+@app.route('/hi')
+def hi():
+    return 'Hi，'
+if __name__ == 'main__':
+ app.run()</pre>
+<p></p>
+<ul>
+<li>runtime.txt</li>
+</ul>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">python-3.7.11</pre>
+<ul>
+<li>requirements.txt</li>
+</ul>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">Flask
+gunicorn</pre>
+<ul>
+<li>Rrocfile</li>
+</ul>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">web gunicorn app:app</pre>
 <p><strong><span>--------------------------------------------------------------------------------------------------</span></strong></p>
-<p><strong>*預計建立虛擬主機，開機時自動開啟動態、靜態網站</strong></p>
-<br />2021.03.11 << <a href='2021.03.11.html'>Previous</a> <a href='2021.05.13.html'>Next</a> >> 2021.05.13</div>
+<p>可以部署到 Heroku or Github</p>
+<p><span>Heroku: <a href="https://git.heroku.com/python-practice-learn.git">https://git.heroku.com/python-practice-learn.git</a></span></p>
+<ul>
+<li><span>步驟:</span></li>
+</ul>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">heroku login -i
+</pre>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">cd your-project</pre>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">git init
+</pre>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">heroku git:clone -a your_app_name</pre>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">git add .</pre>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">git commit -am "information"</pre>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">git push heroku master</pre>
+<p>部屬位於: <a href="https://git.heroku.com/python-practice-learn.git">https://git.heroku.com/your-app-name.git</a><br/>網址: <a href="https://your-app-name.herokuapp.com/">https://your-app-name.herokuapp.com/</a><br/><br/></p>
+<ul>
+<li>編輯:</li>
+</ul>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">heroku login -i</pre>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">heroku git:clone -a your-app-name</pre>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">cd your-app-name</pre>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">git add .</pre>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">git commit -a "information"
+</pre>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">git push heroku master</pre>
+<p><br/><br/><br/><br/><br/><br/></p>
+<br />Email 發送電子郵件 << <a href='Email 發送電子郵件.html'>Previous</a> <a href='Pandas 資料分析.html'>Next</a> >> Pandas 資料分析</div>
         
     <!-- footer -->
       <div class="container">
