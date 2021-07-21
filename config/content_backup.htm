@@ -580,9 +580,31 @@ gunicorn</pre>
 <p><a href="https://www.youtube.com/watch?v=B5BgPWBZhvY&amp;list=PL-g0fdC5RMboYEyt6QS2iLb_1m7QcgfHk&amp;index=29" title="https://www.youtube.com/watch?v=B5BgPWBZhvY&amp;list=PL-g0fdC5RMboYEyt6QS2iLb_1m7QcgfHk&amp;index=29"><b>https://www.youtube.com/watch?v=B5BgPWBZhvY&amp;list=PL-g0fdC5RMboYEyt6QS2iLb_1m7QcgfHk&amp;index=29</b></a></p>
 <p><b> </b></p>
 <h3>Numpy</h3>
-<p><span>NumPy是Python語言的一個擴充程式庫。支援高階大量的維度陣列與矩陣運算，此外也針對陣列運算提供大量的數學函式函式庫。</span></p>
-<p><strong><span>--------------------------------------------------------------------------------------------------</span></strong></p>
-<h2>Html</h2>
+<p><strong>NumPy是Python語言的一個擴充程式庫。支援高階大量的維度陣列與矩陣運算，此外也針對陣列運算提供大量的數學函式函式庫。</strong></p>
+<p><strong>--------------------------------------------------------------------------------------------------</strong></p>
+<p><strong>重點在於陣列的操作，其所有功能特色都建築在同質且多重維度的 <span style="color: #993300; background-color: #dbcece;"><code>ndarray</code></span>（N-dimensional array）上。<span style="color: #993300; background-color: #dbcece;"><code>ndarray</code></span><span style="color: #808080;"> </span>的關鍵屬性是維度（ndim）、形狀（shape）和數值類型（dtype）。 一般我們稱一維陣列為 <span style="color: #800000; background-color: #dbcece;"><code>vector</code></span> 而二維陣列為 <span style="background-color: #dbcece; color: #800000;"><code>matrix</code></span>。一開始我們會引入 <code>numpy</code> 模組，透過傳入 <span style="background-color: #dbcece; color: #800000;"><code>list</code></span> 到 <span style="color: #800000; background-color: #dbcece;"><code>numpy.array()</code></span> 創建陣列。</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import numpy as np
+np1=np.array([3, 4, -3])
+print(np1.ndim,np1.shape,np1.dtype)
+#一位陣列 ,三個元素 ,資料型別
+np1=np1.size
+#數量
+np2=np.empty(4)
+#創造一個有四個資料的一維陣列
+np3=np.empty([3,3])
+#創造一個3x3的陣列
+np4=np.arange(8)
+#創資料為 0-8
+np5=np.array([[1,2,3,4],[1,2,3,4]])
+#2x4陣列
+np6=np.array([[[1,2,3],[1,2,3]],[[1,2,3],[1,2,3]],[[1,2,3],[1,2,3]]])
+#3x2x3陣列
+np7=np.zeros([2,2,2,2])
+#2x2x2x2資料為0的陣列
+print(np7)
+</pre>
+<p><strong> </strong></p>
+<p><strong></strong></p><h2>Html</h2>
 <p></p>
 <p><svg height="20" width="92" xmlns="http://www.w3.org/2000/svg"><lineargradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"></stop><stop offset="1" stop-opacity=".1"></stop></lineargradient><mask id="a"><rect fill="#fff" height="20" rx="3" width="92"></rect></mask><g mask="url(#a)"><path d="M0 0h34v20H0z" fill="#555"></path><path d="M34 0h58v20H34z" fill="#46BC99"></path><path d="M0 0h92v20H0z" fill="url(#b)"></path></g><g fill="#fff" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11" text-anchor="middle"><text fill="#010101" fill-opacity=".3" x="17" y="15">chat</text><text x="17" y="14">web</text><text fill="#010101" fill-opacity=".3" x="62" y="15">on LKH</text><text x="62" y="14">on LKH</text></g></svg></p>
 <p><br/><br/></p>
@@ -610,7 +632,7 @@ gunicorn</pre>
 <p><strong>TensorFlow是一個開源軟體庫，用於各種感知和語言理解任務的機器學習。目前被50個團隊用於研究和生產許多Google商業產品，如語音辨識、Gmail、Google 相簿和搜尋，其中許多產品曾使用過其前任軟體DistBelief。</strong></p>
 <p><strong>--------------------------------------------------------------------------------------------------</strong></p>
 <p><strong>Anaconda: <a href="https://www.anaconda.com/">https://www.anaconda.com/</a></strong></p>
-<p><strong><span style="color: #ffffff; background-color: #008000;"><a href="https://repo.anaconda.com/archive/Anaconda3-2021.05-Windows-x86_64.exe" style="color: #ffffff; background-color: #008000;">Download↓</a></span></strong></p>
+<p><span style="text-decoration: underline;"><strong><span style="color: #ffffff; background-color: #008000;"><a href="https://repo.anaconda.com/archive/Anaconda3-2021.05-Windows-x86_64.exe" style="color: #ffffff; background-color: #008000; text-decoration: underline;">Download↓</a></span></strong></span></p>
 <p><strong><span style="color: #ffffff; background-color: #008000;"></span></strong></p>
 <p><strong></strong><strong>建立 TensorFlow 的虛擬環境:</strong></p>
 <p style="padding-left: 30px;"><strong>將 Anaconda Prompt 以管理員身分開啟</strong></p>
