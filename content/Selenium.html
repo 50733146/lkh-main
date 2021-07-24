@@ -2,7 +2,7 @@
         <head>
         <title>CMSiMDE</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H3">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -134,30 +134,123 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">C++ << <a href='C++.html'>Previous</a> <br /><h1>Tensorflow</h1>
-<p><strong>TensorFlow是一個開源軟體庫，用於各種感知和語言理解任務的機器學習。目前被50個團隊用於研究和生產許多Google商業產品，如語音辨識、Gmail、Google 相簿和搜尋，其中許多產品曾使用過其前任軟體DistBelief。</strong></p>
-<p><strong>--------------------------------------------------------------------------------------------------</strong></p>
-<p><strong>Anaconda: <a href="https://www.anaconda.com/">https://www.anaconda.com/</a></strong></p>
-<p><span style="text-decoration: underline;"><strong><span style="color: #ffffff; background-color: #008000;"><a href="https://repo.anaconda.com/archive/Anaconda3-2021.05-Windows-x86_64.exe" style="color: #ffffff; background-color: #008000; text-decoration: underline;">Download↓</a></span></strong></span></p>
-<p><strong><span style="color: #ffffff; background-color: #008000;"></span></strong></p>
-<p><strong></strong><strong>建立 TensorFlow 的虛擬環境:</strong></p>
-<p style="padding-left: 30px;"><strong>將 Anaconda Prompt 以管理員身分開啟</strong></p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">conda create -n tensorflowenv python=3.7 anaconda</pre>
-<p style="padding-left: 30px;"><strong>安裝完成後虛擬環境實體位置在 </strong></p>
-<p style="padding-left: 30px;"><strong></strong></p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">C:\ProgramData\Anaconda3\envs\</pre>
-<p style="padding-left: 30px;"><strong>切換到 tensorflowenv 虛擬環境</strong></p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">activate tensorflowenv
+    <div id="tipue_search_content">Urllib.request (URL) << <a href='Urllib.request (URL).html'>Previous</a> <a href='Email 發送電子郵件.html'>Next</a> >> Email 發送電子郵件<br /><h1>Selenium</h1>
+<ul>
+<li><strong>介紹: </strong><strong>Selenium提供了一個簡單的API應用程式介面，使用者可以利用Selenium Webdriver 編寫功能及測試。</strong></li>
+<li><strong>安裝: pip install selenium</strong></li>
+<li><strong>webdriver: 下載</strong></li>
+</ul>
+<ol style="list-style-type: lower-alpha;">
+<li><strong>Chrome: <span style="background-color: #008000; color: #ffffff;"><a href="https://chromedriver.storage.googleapis.com/91.0.4472.101/chromedriver_win32.zip" style="background-color: #008000; color: #ffffff;">Download↓</a></span></strong></li>
+<li><strong>Edge: <span style="background-color: #008000; color: #ffffff;"><a href="https://msedgedriver.azureedge.net/92.0.902.55/edgedriver_win64.zip" style="background-color: #008000; color: #ffffff;">Download↓</a></span></strong></li>
+<li><strong>Firefox: <span style="background-color: #008000; color: #ffffff;"><a href="https://github.com/mozilla/geckodriver/releases/download/v0.29.1/geckodriver-v0.29.1-win64.zip" style="background-color: #008000; color: #ffffff;">Download↓</a></span></strong></li>
+</ol>
+<p><span style="background-color: #ffffff; color: #000000;"><strong>參考: <a href="https://selenium-python.readthedocs.io/index.html">selenium</a></strong></span></p>
+<p><strong><span>--------------------------------------------------------------------------------------------------</span></strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">from selenium import webdriver as wd
+from selenium.webdriver.common.keys import Keys as k
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait as wdw
+from selenium.webdriver.support import expected_conditions as EC
+import time as t
+path="C:/chromedriver.exe"
+#執行檔
+driver=wd.Chrome(path)
+driver.get("https://www.dcard.tw/f")
+#網站
+search=driver.find_element_by_name("query")
+#收尋欄的name為query 可以以其他代替
+search.clear
+#清除收尋欄資訊
+search.send_keys("比特幣")
+#在收尋欄上輸入 比特幣
+search.send_keys(k.RETURN)
+#收尋欄 收尋
+wdw(driver, 10).until(
+        EC.presence_of_element_located((By.CLASS_NAME, "sc-1s9033j-0"))
+    )
+#等待直到網頁出現sc-1s9033j-0
+titles=driver.find_elements_by_class_name("tgn9uw-3")
+for title in titles:
+    print(title.text)
+link=driver.find_element_by_link_text("谨防上当受骗")
+link.click()
+#點擊此內容
+driver.back()
+#回到上一頁
+driver.back()
+driver.forward()
+#回到下一頁
+t.sleep(10)
+driver.quit()
+#關閉</pre>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">from selenium import webdriver as wd
+from selenium.webdriver.common.keys import Keys as k
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait as wdw
+from selenium.webdriver.support import expected_conditions as EC
+import time as t
+import os
+import wget
+path="C:/chromedriver.exe"
+#執行檔
+driver=wd.Chrome(path)
+driver.get("https://www.instagram.com/")
+#網站
+username=wdw(driver,10).until(
+    EC.presence_of_element_located((By.NAME,"username"))
+)
+#因為跳轉所以使webdriverwait
+password=wdw(driver,10).until(
+    EC.presence_of_element_located((By.NAME,"password"))
+)
+login=driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[3]/button/div')
+#使用XPath 登入按鈕
+username.clear()
+password.clear()
+username.send_keys("your-id")
+#id
+password.send_keys("your-password")
+#password
+login.click()
+#登入
+search=wdw(driver,10).until(
+    EC.presence_of_element_located((By.XPATH,'//*[@id="react-root"]/section/nav/div[2]/div/div/div[2]/input'))
+)
+#使用XPath 收尋欄
+search.clear()
+keyword="#dog"
+search.send_keys(keyword)
+#收尋欄輸入資料
+t.sleep(1)
+search.send_keys(k.RETURN)
+#收尋欄 收尋
+t.sleep(1)
+search.send_keys(k.RETURN)
+#需要點擊兩次
+wdw(driver,10).until(
+    EC.presence_of_element_located((By.CLASS_NAME,"FFVAD"))
+)
+#跳轉使用webdriverwait
+for i in range(5):
+    driver.execute_script("window.scrollTo(0,document.body.scrollHeight);")
+    t.sleep(5)
+#使用HTNL檔 把網頁往下展開5次 為了更多資料
+imgs=driver.find_elements_by_class_name("FFVAD")
+#圖檔(s)
+path=os.path.join(keyword)
+os.mkdir(path)
+#創建檔案 以keyword命名
+count=0
+for img in imgs:
+    save_as=os.path.join(path,keyword+str(count)+".jpg")
+    #將檔案命名為keyword 0+count.jpg
+    wget.download(img.get_attribute("src"),save_as)
+    #自動下載
+    count+=1
 </pre>
-<p style="padding-left: 30px;"><strong>安裝 TensorFlow &amp; keras</strong></p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">pip install tensorflow
-</pre>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">pip install keras
-</pre>
-<p style="padding-left: 30px;"><strong>關閉虛擬環境回到原來 Python 環境</strong></p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">deactivate</pre>
-<p><strong>--------------------------------------------------------------------------------------------------</strong></p>
-<p><strong><a href="https://www.tensorflow.org/?hl=zh-tw">https://www.tensorflow.org/?hl=zh-tw</a></strong></p><br />C++ << <a href='C++.html'>Previous</a> </div>
+<p><br/><br/></p>
+<p></p><br />Urllib.request (URL) << <a href='Urllib.request (URL).html'>Previous</a> <a href='Email 發送電子郵件.html'>Next</a> >> Email 發送電子郵件</div>
         
     <!-- footer -->
       <div class="container">
