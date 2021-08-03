@@ -123,7 +123,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='倉儲.html'>倉儲</a><li class='has-children'><a href='2021.html'>2021</a><ul class='dropdown'><li><a href='2021.03.02.html'>2021.03.02</a><li><a href='2021.03.04.html'>2021.03.04</a><li><a href='2021.03.11.html'>2021.03.11</a><li><a href='2021.04.28.html'>2021.04.28</a><li><a href='2021.05.13.html'>2021.05.13</a><li><a href='2021.07.01.html'>2021.07.01</a><li><a href='2021.07.02.html'>2021.07.02</a><li><a href='2021.07.03.html'>2021.07.03</a></li></ul><li><a href='SSH.html'>SSH</a><li><a href='Heroku.html'>Heroku</a><li><a href='LaTeX.html'>LaTeX</a><li><a href='2021 P-TECH 暑期實習.html'>2021 P-TECH 暑期實習</a><li class='has-children'><a href='插大.html'>插大</a><ul class='dropdown'><li><a href='國立普通大學.html'>國立普通大學</a><li><a href='國立科技大學.html'>國立科技大學</a><li><a href='私立普通大學.html'>私立普通大學</a><li><a href='私立科技大學.html'>私立科技大學</a></li></ul><li class='has-children'><a href='程式.html'>程式</a><ul class='dropdown'><li class='has-children'><a href='Python.html'>Python</a><ul class='dropdown'><li><a href='入門.html'>入門</a><li><a href='Urllib.request (URL).html'>Urllib.request (URL)</a><li><a href='Selenium.html'>Selenium</a><li><a href='Email 發送電子郵件.html'>Email 發送電子郵件</a><li><a href='Flask 網站開發.html'>Flask 網站開發</a><li><a href='Pandas 資料分析.html'>Pandas 資料分析</a><li><a href='Numpy.html'>Numpy</a></li></ul><li><a href='Html.html'>Html</a><li><a href='Java.html'>Java</a><li><a href='SQL.html'>SQL</a><li><a href='C++.html'>C++</a></li></ul><li><a href='Tensorflow.html'>Tensorflow</a></li>
+                     <li><a href='倉儲.html'>倉儲</a><li class='has-children'><a href='2021.html'>2021</a><ul class='dropdown'><li><a href='2021.03.02.html'>2021.03.02</a><li><a href='2021.03.04.html'>2021.03.04</a><li><a href='2021.03.11.html'>2021.03.11</a><li><a href='2021.04.28.html'>2021.04.28</a><li><a href='2021.05.13.html'>2021.05.13</a><li><a href='2021.07.01.html'>2021.07.01</a><li><a href='2021.07.02.html'>2021.07.02</a><li><a href='2021.07.03.html'>2021.07.03</a><li><a href='2021.07.29.html'>2021.07.29</a></li></ul><li><a href='SSH.html'>SSH</a><li><a href='Heroku.html'>Heroku</a><li><a href='LaTeX.html'>LaTeX</a><li><a href='2021 P-TECH 暑期實習.html'>2021 P-TECH 暑期實習</a><li class='has-children'><a href='插大.html'>插大</a><ul class='dropdown'><li><a href='國立普通大學.html'>國立普通大學</a><li><a href='國立科技大學.html'>國立科技大學</a><li><a href='私立普通大學.html'>私立普通大學</a><li><a href='私立科技大學.html'>私立科技大學</a></li></ul><li class='has-children'><a href='程式.html'>程式</a><ul class='dropdown'><li class='has-children'><a href='Python.html'>Python</a><ul class='dropdown'><li><a href='入門.html'>入門</a><li><a href='Urllib.request (URL).html'>Urllib.request (URL)</a><li><a href='Selenium.html'>Selenium</a><li><a href='Email 發送電子郵件.html'>Email 發送電子郵件</a><li><a href='Flask 網站開發.html'>Flask 網站開發</a><li><a href='Pandas 資料分析.html'>Pandas 資料分析</a><li><a href='Numpy.html'>Numpy</a></li></ul><li class='has-children'><a href='Html.html'>Html</a><ul class='dropdown'><li><a href='Svg.html'>Svg</a></li></li></ul></ul><li class='has-children'><a href='Tensorflow.html'>Tensorflow</a><ul class='dropdown'><li><a href='快速入門.html'>快速入門</a></li>
                       </ul>
                 </nav>
               </div>
@@ -134,7 +134,36 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">Html << <a href='Html.html'>Previous</a> <a href='SQL.html'>Next</a> >> SQL<br /><h1>Java</h1><br />Html << <a href='Html.html'>Previous</a> <a href='SQL.html'>Next</a> >> SQL</div>
+    <div id="tipue_search_content">Tensorflow << <a href='Tensorflow.html'>Previous</a> <br /><h1>快速入門</h1>
+<p><strong>匯入tensorflow</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import tensorflow as tf</pre>
+<p><strong>加載mnist數據</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">mnist = tf.keras.datasets.mnist
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+x_train, x_test = x_train / 255.0, x_test / 255.0</pre>
+<p><strong>tensorflow.keras.Sequential 通過堆疊來建構模型。選擇優化器和損失函數進行訓練</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">model = tf.keras.models.Sequential([
+  tf.keras.layers.Flatten(input_shape=(28, 28)),
+  tf.keras.layers.Dense(128, activation='relu'),
+  tf.keras.layers.Dropout(0.2),
+  tf.keras.layers.Dense(10)
+])</pre>
+<p><strong>對於每個示例，模型都會返回一個 <a href="https://developers.google.com/machine-learning/glossary?hl=zh-tw#logits">logits</a> or <a href="https://developers.google.com/machine-learning/glossary?hl=zh-tw#log-odds">log-odds</a> 分數向量，每個類別一個</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">predictions = model(x_train[:1]).numpy()
+predictions</pre>
+<p><strong>該tensorflow.nn.softmax函數將這些logits轉換為每個類的概率</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">tf.nn.softmax(predictions).numpy()</pre>
+<p><strong>losses.SeparseCategoricalCrossentropy損失需要logits和的向量True索引，並返回每個實力的標量損失</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)</pre>
+<p><strong>此損失等於真實類別的負對概率。</strong></p>
+<p><strong>這個未經訓練的模型給出的概率，接近隨機(每個類為1/10)，因此初始損失接近-tensorflow.math.log(1/10)</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">loss_fn(y_train[:1], predictions).numpy()</pre>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"></pre>
+<p><strong>該Model.fit方法調整模型參數以最小化損失</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">model.fit(x_train, y_train, epochs=5)</pre>
+<p><strong>該Model.evaluate方法通常在<a href="https://developers.google.com/machine-learning/glossary?hl=zh-tw#validation-set">驗證集</a>or<a href="https://developers.google.com/machine-learning/glossary?hl=zh-tw#test-set">測試集</a>上檢查模型性能</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">model.evaluate(x_test,  y_test, verbose=2)</pre>
+<p></p><br />Tensorflow << <a href='Tensorflow.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">

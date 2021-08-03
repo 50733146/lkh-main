@@ -254,9 +254,10 @@ AABJRU5ErkJggg==" id="image0" width="300" x="0" y="0"/> </svg></p><h1>2021</h1>
 <p><b>git: <a href="https://git-scm.com/">https://git-scm.com/</a></b></p>
 <p><a href="https://github.com/git-for-windows/git/releases/download/v2.32.0.windows.1/Git-2.32.0-64-bit.exe"><span style="text-decoration: underline; background-color: #008000; color: #ffffff;"><b>Download↓</b></span></a></p>
 <p><span style="background-color: #ffffff; color: #000000;"><b>github desktop: <a href="https://desktop.github.com/">https://desktop.github.com/</a></b></span></p>
-<p><span style="text-decoration: underline;"><a href="https://central.github.com/deployments/desktop/desktop/latest/win32"><b><span style="color: #ffffff; background-color: #008000; text-decoration: underline;">Download↓</span></b></a></span></p>
-<p><b></b></p>
-<h1>SSH</h1>
+<p><span style="text-decoration: underline;"><a href="https://central.github.com/deployments/desktop/desktop/latest/win32"><b><span style="color: #ffffff; background-color: #008000; text-decoration: underline;">Download↓</span></b></a></span></p><h2>2021.07.29</h2>
+<p><strong>了解網頁編輯運作，包含HTML、CSS、JavaScript</strong></p>
+<p><strong><span>--------------------------------------------------------------------------------------------------</span></strong></p>
+<p><strong><span>編寫網頁: <a href="https://linkuanhao.github.io/website/">https://linkuanhao.github.io/website/</a></span></strong></p><h1>SSH</h1>
 <p><span style="color: #000000;"><strong><code class="js plain">1.建立 OpenSSH key   </code></strong></span></p>
 <p><span style="color: #000000;"><strong><code class="js plain"># pair ssh-keygen -t rsa -b 4096 -C </code><code class="js string">"使用者學號"</code></strong></span></p>
 <p><span style="color: #000000;"><strong><code class="js string">2.Putty 作為 SSH 連線客戶端工具</code></strong></span></p>
@@ -907,6 +908,7 @@ n28=np.hsplit(n26,3)
 #根據第二個維度切割三個陣列</pre>
 <p><strong> </strong></p>
 <p><strong></strong></p><h2>Html</h2>
+<h3>Svg</h3>
 <p></p>
 <p><svg height="20" width="92" xmlns="http://www.w3.org/2000/svg"><lineargradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"></stop><stop offset="1" stop-opacity=".1"></stop></lineargradient><mask id="a"><rect fill="#fff" height="20" rx="3" width="92"></rect></mask><g mask="url(#a)"><path d="M0 0h34v20H0z" fill="#555"></path><path d="M34 0h58v20H34z" fill="#46BC99"></path><path d="M0 0h92v20H0z" fill="url(#b)"></path></g><g fill="#fff" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11" text-anchor="middle"><text fill="#010101" fill-opacity=".3" x="17" y="15">chat</text><text x="17" y="14">web</text><text fill="#010101" fill-opacity=".3" x="62" y="15">on LKH</text><text x="62" y="14">on LKH</text></g></svg></p>
 <p><br/><br/></p>
@@ -927,10 +929,7 @@ n28=np.hsplit(n26,3)
   Sorry, your browser does not support inline LKH.
 &lt;/svg&gt;</pre>
 <p></p>
-<p></p>
-<h2>Java</h2><h2>SQL</h2>
-<h2>C++</h2>
-<h1>Tensorflow</h1>
+<p></p><h1>Tensorflow</h1>
 <p><strong>TensorFlow是一個開源軟體庫，用於各種感知和語言理解任務的機器學習。目前被50個團隊用於研究和生產許多Google商業產品，如語音辨識、Gmail、Google 相簿和搜尋，其中許多產品曾使用過其前任軟體DistBelief。</strong></p>
 <p><strong>--------------------------------------------------------------------------------------------------</strong></p>
 <p><strong>Anaconda: <a href="https://www.anaconda.com/">https://www.anaconda.com/</a></strong></p>
@@ -953,4 +952,33 @@ n28=np.hsplit(n26,3)
 <p style="padding-left: 30px;"><strong>關閉虛擬環境回到原來 Python 環境</strong></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">deactivate</pre>
 <p><strong>--------------------------------------------------------------------------------------------------</strong></p>
-<p><strong><a href="https://www.tensorflow.org/?hl=zh-tw">https://www.tensorflow.org/?hl=zh-tw</a></strong></p>
+<p><strong>參考: <a href="https://www.tensorflow.org/?hl=zh-tw">https://www.tensorflow.org/</a></strong></p><h2>快速入門</h2>
+<p><strong>匯入tensorflow</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import tensorflow as tf</pre>
+<p><strong>加載mnist數據</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">mnist = tf.keras.datasets.mnist
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+x_train, x_test = x_train / 255.0, x_test / 255.0</pre>
+<p><strong>tensorflow.keras.Sequential 通過堆疊來建構模型。選擇優化器和損失函數進行訓練</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">model = tf.keras.models.Sequential([
+  tf.keras.layers.Flatten(input_shape=(28, 28)),
+  tf.keras.layers.Dense(128, activation='relu'),
+  tf.keras.layers.Dropout(0.2),
+  tf.keras.layers.Dense(10)
+])</pre>
+<p><strong>對於每個示例，模型都會返回一個 <a href="https://developers.google.com/machine-learning/glossary?hl=zh-tw#logits">logits</a> or <a href="https://developers.google.com/machine-learning/glossary?hl=zh-tw#log-odds">log-odds</a> 分數向量，每個類別一個</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">predictions = model(x_train[:1]).numpy()
+predictions</pre>
+<p><strong>該tensorflow.nn.softmax函數將這些logits轉換為每個類的概率</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">tf.nn.softmax(predictions).numpy()</pre>
+<p><strong>losses.SeparseCategoricalCrossentropy損失需要logits和的向量True索引，並返回每個實力的標量損失</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(from_logits=True)</pre>
+<p><strong>此損失等於真實類別的負對概率。</strong></p>
+<p><strong>這個未經訓練的模型給出的概率，接近隨機(每個類為1/10)，因此初始損失接近-tensorflow.math.log(1/10)</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">loss_fn(y_train[:1], predictions).numpy()</pre>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"></pre>
+<p><strong>該Model.fit方法調整模型參數以最小化損失</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">model.fit(x_train, y_train, epochs=5)</pre>
+<p><strong>該Model.evaluate方法通常在<a href="https://developers.google.com/machine-learning/glossary?hl=zh-tw#validation-set">驗證集</a>or<a href="https://developers.google.com/machine-learning/glossary?hl=zh-tw#test-set">測試集</a>上檢查模型性能</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">model.evaluate(x_test,  y_test, verbose=2)</pre>
+<p></p>
