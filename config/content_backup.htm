@@ -257,8 +257,146 @@ AABJRU5ErkJggg==" id="image0" width="300" x="0" y="0"/> </svg></p><h1>2021</h1>
 <p><span style="text-decoration: underline;"><a href="https://central.github.com/deployments/desktop/desktop/latest/win32"><b><span style="color: #ffffff; background-color: #008000; text-decoration: underline;">Download↓</span></b></a></span></p><h2>2021.07.29</h2>
 <p><strong>了解網頁編輯運作，包含HTML、CSS、JavaScript</strong></p>
 <p><strong><span>--------------------------------------------------------------------------------------------------</span></strong></p>
-<p><strong><span>編寫網頁: <a href="https://linkuanhao.github.io/website/">https://linkuanhao.github.io/website/</a></span></strong></p><h2>2021.09.23</h2>
-<p><strong>github page publish at <a href="http://www.linkuanhao.tk/">http://www.linkuanhao.tk/</a></strong></p><h1>SSH</h1>
+<p><strong><span>編寫網頁: <a href="https://linkuanhao.github.io/website/">https://linkuanhao.github.io/website/</a></span></strong></p>
+<h2>2021.10.05</h2>
+<p>Windows 操作</p>
+<p>fossil.exe<span style="color: #ffffff; background-color: #008000;"><span style="color: #000000; font-family: Quicksand, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">: </span><a href="https://www.fossil-scm.org/home/uv/fossil-w64-20211004.zip" style="color: #ffffff; background-color: #008000;"><span style="color: #000000; font-family: Quicksand, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;"></span><span style="background-color: #008080;">下載</span></a></span><span style="color: #ffffff; background-color: #008000;"></span></p>
+<p><span style="color: #000000; background-color: #ffffff;">stunnel.exe: </span><span style="color: #ffffff; background-color: #008080;"><a href="https://www.stunnel.org/downloads/stunnel-5.60-win64-installer.exe" style="color: #ffffff; background-color: #008080;">下載</a></span></p>
+<p>將.exe設在可攜系統的path</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">start /MIN %Disk%:\tmp\fossil\fossil.exe
+start /MIN %Disk%:\tmp\stunnel\bin\stunnel.exe</pre>
+<p>--------------------------------------------------------------------------------------------------</p>
+<p><span style="color: #000000; background-color: #ffffff;">操作一</span></p>
+<div><span style="color: #000000; background-color: #ffffff;">設定 syunnel/config/stunnel.conf</span></div>
+<div>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">[https]
+; 以 python -m http.server 8000 --bind 127.0.0.1 啟動 www server 
+accept  = 127.0.0.1:443
+connect = 127.0.0.1:8000
+cert = localhost.crt
+key = localhost.key
+TIMEOUTclose = 0</pre>
+<p>將檔案複製到stunnel/config/</p>
+<span style="color: #000000; background-color: #ffffff;">localhost.key: <br/></span></div>
+<div>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">-----BEGIN PRIVATE KEY-----
+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
+8ZuuhbLrhMSYZt2IjqVjSlsLkvSHnT0=
+-----END PRIVATE KEY-----</pre>
+<span style="color: #000000; background-color: #ffffff;"><br/></span></div>
+<div><span style="color: #000000; background-color: #ffffff;">localhost.crt:</span></div>
+<div>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">-----BEGIN CERTIFICATE-----
+MIIFazCCA1OgAwIBAgIUFrpn6Zzppr8bxZcOBiYTVylfzKMwDQYJKoZIhvcNAQEL
+BQAwRTELMAkGA1UEBhMCVFcxEzARBgNVBAgMClNvbWUtU3RhdGUxITAfBgNVBAoM
+GEludGVybmV0IFdpZGdpdHMgUHR5IEx0ZDAeFw0yMTAzMDUwNjE1NDZaFw0yMjAz
+MDUwNjE1NDZaMEUxCzAJBgNVBAYTAlRXMRMwEQYDVQQIDApTb21lLVN0YXRlMSEw
+HwYDVQQKDBhJbnRlcm5ldCBXaWRnaXRzIFB0eSBMdGQwggIiMA0GCSqGSIb3DQEB
+AQUAA4ICDwAwggIKAoICAQCjk99FzCiGepVZzhJh7eOvaounC+R6z8LdlGq+DZ1e
+VJD7OBTGNoTfosh3qPYPx9q1VT2bUR+ZviQp7jzqfVox/SCd+YwwA8AqfZHTNWst
+hK+JXAx+EvTAEgvSU3MB6z+3ynnco7Sw3SJVL38NI0QyNoAQsvPB/4HZvsL6+bGA
+BOfr5TAkOrORV3FkZOBQdGwFJx218IXbuVQmXL2c0VyFFYDHxtYgvRuRfhJMeQTW
+b4m4VAw6O2gEQWGPS6MPooELYe5UIKfGdRPNQ5dkV8lx4/uhWxkNTy9NZeUZdFFX
+kyT6KoHRvd12NU8SRro7+ru9YXMPKD4jvkN+tu2zRAAiWf5SE5Q5LlHwuKUF6uTj
+4gzlUzVdzsbqOj2aIWOORLAIbK/ACKwR/CJ1X1DnX7pbd9T3aBjMWRN7bTgTHgve
+D8LpSG3zV2U1Ltc4Ar2XcN00HC5fkNw+ml13Y9JMMPA1ZTwa4EG8td9PBR4SFgLF
+REpeVrXKR/CxvDgYNasnhNZOfW2DIiL33nF9XWtDVn2iENETbYZ8C0lgmHMRt8oD
+E2B95VQKk3BrrXVnJuHuG7XBGkNxOl7EG0GJvmwO/Up3fpglto6MNGnBU5LN3fut
+WtROzNUFS6d/i0zS/XuafkfIWRjh/5jBEoB71no2iq2hZnzNYdYXk7wivqLrS+Ts
+bQIDAQABo1MwUTAdBgNVHQ4EFgQUQv9f6zQ4IAsEfHqPS2Wpku4n7uowHwYDVR0j
+BBgwFoAUQv9f6zQ4IAsEfHqPS2Wpku4n7uowDwYDVR0TAQH/BAUwAwEB/zANBgkq
+hkiG9w0BAQsFAAOCAgEAEi6Qnun1V+CrN7PcqPoG3vZ3geDWWS7yQstnqhIivRkf
+guh3Lhl9KG+CfrFOV4NvOq82jPBtbBFp2FE8TTt5JtdjIxI9kKNs0Jymvj3Qc/6r
+d/b97Cp89iRYgkZ2Yi0moWgbDVilQgOUqcvX1GQQqKPnOahDLle5k5JX/o909Zc+
+zAIfwGT3pSn2Pe0KGibF90ezPqJ+upw2N65/X2fAtonKybChR5DkC8ZoM/18SOW7
+Rjp42p/ZYBVnaMwJNWWTBAQ1NwtOiVaRvRmSPjBrLQqStNcHtR5ByS1qCiQhROT7
+HwvcTvtepKSZpdBxucCEuZfb0W8pCPyyKTQyi4aVocTTrLOOCMm8Ksn187osyUBc
+00Z59eQJGHnNSvX/XxR66X3ppLxu6cYVgtC1dq2oX0Ye0NcWbDsg4fZBCgvnulAf
+cmSzkS4OfNw8Zd28pD1zMrJr+JMnjrPzU3ogT+n5VXB0/0rF9xPy7X0zeqHdy6qQ
+L+cE4kX+eD+FqSKTBKRRy/+gRyswBSkKyWopRzUvsUNrji+M3FjVfvR4dG+fxpxt
+TAA/n9OiA1FO9U0HABJLL0KYtO4M0GDe7TofuUnz6+R9VR64Kk1mBfvzA36IptMK
+K/uJGuBHdLG95Wx9GzkjWYgVopAaDNzyom96bmRoYgQ2hu8irvpsJtpbE/1iHIU=
+-----END CERTIFICATE-----</pre>
+<span style="color: #000000; background-color: #ffffff;">在命令列輸入<br/></span></div>
+<div>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">python -m  http.server 8000 --bind 127.0.0.1
+</pre>
+<span style="color: #000000; background-color: #ffffff;">可啟動www server 讓使用者透過<a href="http://localhost:8000/">http://localhost:8000/</a>擷取到此目錄的檔案<br/></span></div>
+<div><span style="color: #000000; background-color: #ffffff;"></span></div>
+<div><span style="color: #000000; background-color: #ffffff;">操作二</span></div>
+<div><span style="color: #000000; background-color: #ffffff;">將操作一 python -m http.server 換成Fossil SCM網路服服務器</span></div>
+<div><span style="color: #000000; background-color: #ffffff;">建立fossil倉儲pj2022.fossil</span></div>
+<div>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">fossil init pj2022.fossil</pre>
+<span style="color: #000000; background-color: #ffffff;">修改密碼<br/></span></div>
+<div>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">fossil user password username new_password -R pj2022.fossil</pre>
+<span style="color: #000000; background-color: #ffffff;">username 輸入原本的使用者<br/></span></div>
+<div><span style="color: #000000; background-color: #ffffff;">new_password 輸入新密碼</span></div>
+<div><span style="color: #000000; background-color: #ffffff;">-R pj2022.fossil 為倉儲檔案</span></div>
+<div>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">fossil server -P 127.0.0.1:9000 --https y:\tmp\pj2022.fossil</pre>
+<span style="color: #000000; background-color: #ffffff;">以上指令啟動後 因以 --http 送出伺服資料 因此<a href="http://localhost:9000/">http://localhost:9000/</a>並無法連線 需在stunnel https代理伺下才能連線<br/></span></div>
+<div><span style="color: #000000; background-color: #ffffff;">設定stunnel讓443可以接受Fossil SCM從 port9000送出資料</span></div>
+<div><span style="color: #000000; background-color: #ffffff;">將\stunnel\config\stunnel.conf</span></div>
+<div>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">[https]
+; 配合從此命令轉接資料: fossil.exe server -P 127.0.0.1:9000 --https y:\tmp\pj2022.fossil
+accept  = 443
+connect = 9000
+cert = localhost.crt
+key = localhost.key
+TIMEOUTclose = 0</pre>
+<span style="color: #000000; background-color: #ffffff;">重啟後<a href="https://localhost/">https://localhost/</a>就可以看到Fossil SCM網際介面<br/></span></div>
+<div><span style="color: #000000; background-color: #ffffff;"></span></div><h1>SSH</h1>
 <p><span style="color: #000000;"><strong><code class="js plain">1.建立 OpenSSH key   </code></strong></span></p>
 <p><span style="color: #000000;"><strong><code class="js plain"># pair ssh-keygen -t rsa -b 4096 -C </code><code class="js string">"使用者學號"</code></strong></span></p>
 <p><span style="color: #000000;"><strong><code class="js string">2.Putty 作為 SSH 連線客戶端工具</code></strong></span></p>
