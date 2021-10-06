@@ -258,16 +258,16 @@ AABJRU5ErkJggg==" id="image0" width="300" x="0" y="0"/> </svg></p><h1>2021</h1>
 <p><strong>了解網頁編輯運作，包含HTML、CSS、JavaScript</strong></p>
 <p><strong><span>--------------------------------------------------------------------------------------------------</span></strong></p>
 <p><strong><span>編寫網頁: <a href="https://linkuanhao.github.io/website/">https://linkuanhao.github.io/website/</a></span></strong></p>
-<h2>2021.10.05</h2>
-<p>Windows 操作</p>
-<p>fossil.exe<span style="color: #ffffff; background-color: #008000;"><span style="color: #000000; font-family: Quicksand, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">: </span><a href="https://www.fossil-scm.org/home/uv/fossil-w64-20211004.zip" style="color: #ffffff; background-color: #008000;"><span style="color: #000000; font-family: Quicksand, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;"></span><span style="background-color: #008080;">下載</span></a></span><span style="color: #ffffff; background-color: #008000;"></span></p>
-<p><span style="color: #000000; background-color: #ffffff;">stunnel.exe: </span><span style="color: #ffffff; background-color: #008080;"><a href="https://www.stunnel.org/downloads/stunnel-5.60-win64-installer.exe" style="color: #ffffff; background-color: #008080;">下載</a></span></p>
-<p>將.exe設在可攜系統的path</p>
+<h2><strong>2021.10.05</strong></h2>
+<p><strong>Windows 操作</strong></p>
+<p><strong>fossil.exe<span style="color: #ffffff; background-color: #008000;"><span style="color: #000000; font-family: Quicksand, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">: </span><a href="https://www.fossil-scm.org/home/uv/fossil-w64-20211004.zip" style="color: #ffffff; background-color: #008000;"><span style="color: #000000; font-family: Quicksand, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;"></span><span style="background-color: #008080;">下載</span></a></span><span style="color: #ffffff; background-color: #008000;"></span></strong></p>
+<p><strong><span style="color: #000000; background-color: #ffffff;">stunnel.exe: </span><span style="color: #ffffff; background-color: #008080;"><a href="https://www.stunnel.org/downloads/stunnel-5.60-win64-installer.exe" style="color: #ffffff; background-color: #008080;">下載</a></span></strong></p>
+<p><strong>將.exe設在可攜系統的path</strong></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">start /MIN %Disk%:\tmp\fossil\fossil.exe
 start /MIN %Disk%:\tmp\stunnel\bin\stunnel.exe</pre>
-<p>--------------------------------------------------------------------------------------------------</p>
-<p><span style="color: #000000; background-color: #ffffff;">操作一</span></p>
-<div><span style="color: #000000; background-color: #ffffff;">設定 syunnel/config/stunnel.conf</span></div>
+<p><strong>--------------------------------------------------------------------------------------------------</strong></p>
+<p><strong><span style="color: #000000; background-color: #ffffff;">操作一</span></strong></p>
+<div><strong><span style="color: #000000; background-color: #ffffff;">設定 syunnel/config/stunnel.conf</span></strong></div>
 <div>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">[https]
 ; 以 python -m http.server 8000 --bind 127.0.0.1 啟動 www server 
@@ -276,8 +276,8 @@ connect = 127.0.0.1:8000
 cert = localhost.crt
 key = localhost.key
 TIMEOUTclose = 0</pre>
-<p>將檔案複製到stunnel/config/</p>
-<span style="color: #000000; background-color: #ffffff;">localhost.key: <br/></span></div>
+<p><strong>將檔案複製到stunnel/config/</strong></p>
+<strong><span style="color: #000000; background-color: #ffffff;">localhost.key: <br/></span></strong></div>
 <div>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">-----BEGIN PRIVATE KEY-----
 MIIJQwIBADANBgkqhkiG9w0BAQEFAASCCS0wggkpAgEAAoICAQCjk99FzCiGepVZ
@@ -331,8 +331,8 @@ Q53r8m5TUuovOUTQRuA1pj8lVCBkvgYlTTOpNMpUm6agCaPmOLHze9qhkxl/JiDk
 QW8p2XyEvEFwWT2E+24Ct+wgAG3xdkC5eYNGa+CeQ82t8b/2WPYYT+O/OpnlH/fz
 8ZuuhbLrhMSYZt2IjqVjSlsLkvSHnT0=
 -----END PRIVATE KEY-----</pre>
-<span style="color: #000000; background-color: #ffffff;"><br/></span></div>
-<div><span style="color: #000000; background-color: #ffffff;">localhost.crt:</span></div>
+<strong><span style="color: #000000; background-color: #ffffff;"><br/></span></strong></div>
+<div><strong><span style="color: #000000; background-color: #ffffff;">localhost.crt:</span></strong></div>
 <div>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">-----BEGIN CERTIFICATE-----
 MIIFazCCA1OgAwIBAgIUFrpn6Zzppr8bxZcOBiYTVylfzKMwDQYJKoZIhvcNAQEL
@@ -365,28 +365,28 @@ L+cE4kX+eD+FqSKTBKRRy/+gRyswBSkKyWopRzUvsUNrji+M3FjVfvR4dG+fxpxt
 TAA/n9OiA1FO9U0HABJLL0KYtO4M0GDe7TofuUnz6+R9VR64Kk1mBfvzA36IptMK
 K/uJGuBHdLG95Wx9GzkjWYgVopAaDNzyom96bmRoYgQ2hu8irvpsJtpbE/1iHIU=
 -----END CERTIFICATE-----</pre>
-<span style="color: #000000; background-color: #ffffff;">在命令列輸入<br/></span></div>
+<strong><span style="color: #000000; background-color: #ffffff;">在命令列輸入<br/></span></strong></div>
 <div>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">python -m  http.server 8000 --bind 127.0.0.1
 </pre>
-<span style="color: #000000; background-color: #ffffff;">可啟動www server 讓使用者透過<a href="http://localhost:8000/">http://localhost:8000/</a>擷取到此目錄的檔案<br/></span></div>
-<div><span style="color: #000000; background-color: #ffffff;"></span></div>
-<div><span style="color: #000000; background-color: #ffffff;">操作二</span></div>
-<div><span style="color: #000000; background-color: #ffffff;">將操作一 python -m http.server 換成Fossil SCM網路服服務器</span></div>
-<div><span style="color: #000000; background-color: #ffffff;">建立fossil倉儲pj2022.fossil</span></div>
+<strong><span style="color: #000000; background-color: #ffffff;">可啟動www server 讓使用者透過<a href="http://localhost:8000/">http://localhost:8000/</a>擷取到此目錄的檔案<br/></span></strong></div>
+<div><strong><span style="color: #000000; background-color: #ffffff;"></span></strong></div>
+<div><strong><span style="color: #000000; background-color: #ffffff;">操作二</span></strong></div>
+<div><strong><span style="color: #000000; background-color: #ffffff;">將操作一 python -m http.server 換成Fossil SCM網路服服務器</span></strong></div>
+<div><strong><span style="color: #000000; background-color: #ffffff;">建立fossil倉儲pj2022.fossil</span></strong></div>
 <div>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">fossil init pj2022.fossil</pre>
-<span style="color: #000000; background-color: #ffffff;">修改密碼<br/></span></div>
+<strong><span style="color: #000000; background-color: #ffffff;">修改密碼<br/></span></strong></div>
 <div>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">fossil user password username new_password -R pj2022.fossil</pre>
-<span style="color: #000000; background-color: #ffffff;">username 輸入原本的使用者<br/></span></div>
-<div><span style="color: #000000; background-color: #ffffff;">new_password 輸入新密碼</span></div>
-<div><span style="color: #000000; background-color: #ffffff;">-R pj2022.fossil 為倉儲檔案</span></div>
+<strong><span style="color: #000000; background-color: #ffffff;">username 輸入原本的使用者<br/></span></strong></div>
+<div><strong><span style="color: #000000; background-color: #ffffff;">new_password 輸入新密碼</span></strong></div>
+<div><strong><span style="color: #000000; background-color: #ffffff;">-R pj2022.fossil 為倉儲檔案</span></strong></div>
 <div>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">fossil server -P 127.0.0.1:9000 --https y:\tmp\pj2022.fossil</pre>
-<span style="color: #000000; background-color: #ffffff;">以上指令啟動後 因以 --http 送出伺服資料 因此<a href="http://localhost:9000/">http://localhost:9000/</a>並無法連線 需在stunnel https代理伺下才能連線<br/></span></div>
-<div><span style="color: #000000; background-color: #ffffff;">設定stunnel讓443可以接受Fossil SCM從 port9000送出資料</span></div>
-<div><span style="color: #000000; background-color: #ffffff;">將\stunnel\config\stunnel.conf</span></div>
+<strong><span style="color: #000000; background-color: #ffffff;">以上指令啟動後 因以 --http 送出伺服資料 因此<a href="http://localhost:9000/">http://localhost:9000/</a>並無法連線 需在stunnel https代理伺下才能連線<br/></span></strong></div>
+<div><strong><span style="color: #000000; background-color: #ffffff;">設定stunnel讓443可以接受Fossil SCM從 port9000送出資料</span></strong></div>
+<div><strong><span style="color: #000000; background-color: #ffffff;">將\stunnel\config\stunnel.conf</span></strong></div>
 <div>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">[https]
 ; 配合從此命令轉接資料: fossil.exe server -P 127.0.0.1:9000 --https y:\tmp\pj2022.fossil
@@ -395,8 +395,8 @@ connect = 9000
 cert = localhost.crt
 key = localhost.key
 TIMEOUTclose = 0</pre>
-<span style="color: #000000; background-color: #ffffff;">重啟後<a href="https://localhost/">https://localhost/</a>就可以看到Fossil SCM網際介面<br/></span></div>
-<div><span style="color: #000000; background-color: #ffffff;"></span></div><h1>SSH</h1>
+<strong><span style="color: #000000; background-color: #ffffff;">重啟後<a href="https://localhost/">https://localhost/</a>就可以看到Fossil SCM網際介面<br/></span></strong></div>
+<div><strong><span style="color: #000000; background-color: #ffffff;"></span></strong></div><h1>SSH</h1>
 <p><span style="color: #000000;"><strong><code class="js plain">1.建立 OpenSSH key   </code></strong></span></p>
 <p><span style="color: #000000;"><strong><code class="js plain"># pair ssh-keygen -t rsa -b 4096 -C </code><code class="js string">"使用者學號"</code></strong></span></p>
 <p><span style="color: #000000;"><strong><code class="js string">2.Putty 作為 SSH 連線客戶端工具</code></strong></span></p>
