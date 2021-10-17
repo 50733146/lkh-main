@@ -1,6 +1,6 @@
 <!DOCTYPE html><html>
         <head>
-        <title>CMSiMDE</title>
+        <title>FXXXTech</title>
         <meta charset="utf-8">
 <meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -35,6 +35,9 @@
         <script src="tipuesearch_content.js"></script>
         <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
         <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <!-- for Wink3 -->
+        <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
+        <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
         <script>
             /* original tipuesearch
             $(document).ready(function() {
@@ -62,11 +65,13 @@
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPowerShell.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
 <script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushRust.js"></script>
 <link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
 <script type="text/javascript">SyntaxHighlighter.all();</script>
 <!-- 暫時不用
@@ -87,7 +92,7 @@ img.add_border {
 
 </head>
 <body>
-<div class='container'><nav>
+<div class='container-fluid'><nav>
         
     <div class="site-wrap">
 
@@ -123,7 +128,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='倉儲.html'>倉儲</a><li class='has-children'><a href='2021.html'>2021</a><ul class='dropdown'><li><a href='2021.03.02.html'>2021.03.02</a><li><a href='2021.03.04.html'>2021.03.04</a><li><a href='2021.03.11.html'>2021.03.11</a><li><a href='2021.04.28.html'>2021.04.28</a><li><a href='2021.05.13.html'>2021.05.13</a><li><a href='2021.07.01.html'>2021.07.01</a><li><a href='2021.07.02.html'>2021.07.02</a><li><a href='2021.07.03.html'>2021.07.03</a><li><a href='2021.07.29.html'>2021.07.29</a><li><a href='2021.10.05.html'>2021.10.05</a><li><a href='2021.10..html'>2021.10.</a></li></ul><li><a href='SSH.html'>SSH</a><li><a href='Heroku.html'>Heroku</a><li><a href='LaTeX.html'>LaTeX</a><li><a href='2021 P-TECH 暑期實習.html'>2021 P-TECH 暑期實習</a><li class='has-children'><a href='插大.html'>插大</a><ul class='dropdown'><li><a href='國立普通大學.html'>國立普通大學</a><li><a href='國立科技大學.html'>國立科技大學</a><li><a href='私立普通大學.html'>私立普通大學</a><li><a href='私立科技大學.html'>私立科技大學</a></li></ul><li class='has-children'><a href='程式.html'>程式</a><ul class='dropdown'><li class='has-children'><a href='Python.html'>Python</a><ul class='dropdown'><li><a href='入門.html'>入門</a><li><a href='Urllib.request (URL).html'>Urllib.request (URL)</a><li><a href='Selenium.html'>Selenium</a><li><a href='Email 發送電子郵件.html'>Email 發送電子郵件</a><li><a href='Flask 網站開發.html'>Flask 網站開發</a><li><a href='Pandas 資料分析.html'>Pandas 資料分析</a><li><a href='Numpy.html'>Numpy</a></li></ul><li class='has-children'><a href='Html.html'>Html</a><ul class='dropdown'><li><a href='Svg.html'>Svg</a></li></li></ul></ul><li class='has-children'><a href='Tensorflow.html'>Tensorflow</a><ul class='dropdown'><li><a href='快速入門.html'>快速入門</a></li>
+                     <li><a href='倉儲.html'>倉儲</a><li class='has-children'><a href='2021.html'>2021</a><ul class='dropdown'><li><a href='2021.03.02.html'>2021.03.02</a><li><a href='2021.03.04.html'>2021.03.04</a><li><a href='2021.03.11.html'>2021.03.11</a><li><a href='2021.04.28.html'>2021.04.28</a><li><a href='2021.05.13.html'>2021.05.13</a><li><a href='2021.07.01.html'>2021.07.01</a><li><a href='2021.07.02.html'>2021.07.02</a><li><a href='2021.07.03.html'>2021.07.03</a><li><a href='2021.07.29.html'>2021.07.29</a><li><a href='2021.10.05.html'>2021.10.05</a><li><a href='2021.10.16.html'>2021.10.16</a></li></ul><li><a href='SSH.html'>SSH</a><li><a href='Heroku.html'>Heroku</a><li><a href='LaTeX.html'>LaTeX</a><li><a href='2021 P-TECH 暑期實習.html'>2021 P-TECH 暑期實習</a><li class='has-children'><a href='插大.html'>插大</a><ul class='dropdown'><li><a href='國立普通大學.html'>國立普通大學</a><li><a href='國立科技大學.html'>國立科技大學</a><li><a href='私立普通大學.html'>私立普通大學</a><li><a href='私立科技大學.html'>私立科技大學</a></li></ul><li class='has-children'><a href='程式.html'>程式</a><ul class='dropdown'><li class='has-children'><a href='Python.html'>Python</a><ul class='dropdown'><li><a href='入門.html'>入門</a><li><a href='Urllib.request (URL).html'>Urllib.request (URL)</a><li><a href='Selenium.html'>Selenium</a><li><a href='Email 發送電子郵件.html'>Email 發送電子郵件</a><li><a href='Flask 網站開發.html'>Flask 網站開發</a><li><a href='Pandas 資料分析.html'>Pandas 資料分析</a><li><a href='Numpy.html'>Numpy</a></li></ul><li class='has-children'><a href='Html.html'>Html</a><ul class='dropdown'><li><a href='Svg.html'>Svg</a></li></li></ul></ul><li class='has-children'><a href='Tensorflow.html'>Tensorflow</a><ul class='dropdown'><li><a href='快速入門.html'>快速入門</a></li>
                       </ul>
                 </nav>
               </div>
@@ -134,8 +139,8 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">2021.07.29 << <a href='2021.07.29.html'>Previous</a> <a href='2021.10..html'>Next</a> >> 2021.10.<br /><h1>2021.10.05</h1>
-<p><strong>Windows 操作</strong></p>
+    <div id="tipue_search_content">2021.07.29 << <a href='2021.07.29.html'>Previous</a> <a href='2021.10.16.html'>Next</a> >> 2021.10.16<br /><h1>2021.10.05</h1>
+<p><strong>Windows 部屬倉儲</strong></p>
 <p><strong>fossil.exe<span style="color: #ffffff; background-color: #008000;"><span style="color: #000000; font-family: Quicksand, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">: </span><a href="https://www.fossil-scm.org/home/uv/fossil-w64-20211004.zip" style="color: #ffffff; background-color: #008000;"><span style="color: #000000; font-family: Quicksand, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;"></span><span style="background-color: #008080;">下載</span></a></span><span style="color: #ffffff; background-color: #008000;"></span></strong></p>
 <p><strong><span style="color: #000000; background-color: #ffffff;">stunnel.exe: </span><span style="color: #ffffff; background-color: #008080;"><a href="https://www.stunnel.org/downloads/stunnel-5.60-win64-installer.exe" style="color: #ffffff; background-color: #008080;">下載</a></span></strong></p>
 <p><strong>將.exe設在可攜系統的path</strong></p>
@@ -271,8 +276,7 @@ connect = 9000
 cert = localhost.crt
 key = localhost.key
 TIMEOUTclose = 0</pre>
-<strong><span style="color: #000000; background-color: #ffffff;">重啟後<a href="https://localhost/">https://localhost/</a>就可以看到Fossil SCM網際介面<br/></span></strong></div>
-<br />2021.07.29 << <a href='2021.07.29.html'>Previous</a> <a href='2021.10..html'>Next</a> >> 2021.10.</div>
+<strong><span style="color: #000000; background-color: #ffffff;"><strong>重啟後<a href="https://localhost/">https://localhost/</a>就可以看到Fossil SCM網際介面</strong><br/></span></strong></div><br />2021.07.29 << <a href='2021.07.29.html'>Previous</a> <a href='2021.10.16.html'>Next</a> >> 2021.10.16</div>
         
     <!-- footer -->
       <div class="container">

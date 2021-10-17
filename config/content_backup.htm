@@ -257,7 +257,7 @@ AABJRU5ErkJggg==" id="image0" width="300" x="0" y="0"/> </svg></p><h1>2021</h1>
 <p><strong><span>--------------------------------------------------------------------------------------------------</span></strong></p>
 <p><strong><span>編寫網頁: <a href="https://linkuanhao.github.io/website/">https://linkuanhao.github.io/website/</a></span></strong></p>
 <h2>2021.10.05</h2>
-<p><strong>Windows 操作</strong></p>
+<p><strong>Windows 部屬倉儲</strong></p>
 <p><strong>fossil.exe<span style="color: #ffffff; background-color: #008000;"><span style="color: #000000; font-family: Quicksand, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;">: </span><a href="https://www.fossil-scm.org/home/uv/fossil-w64-20211004.zip" style="color: #ffffff; background-color: #008000;"><span style="color: #000000; font-family: Quicksand, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; display: inline !important; float: none;"></span><span style="background-color: #008080;">下載</span></a></span><span style="color: #ffffff; background-color: #008000;"></span></strong></p>
 <p><strong><span style="color: #000000; background-color: #ffffff;">stunnel.exe: </span><span style="color: #ffffff; background-color: #008080;"><a href="https://www.stunnel.org/downloads/stunnel-5.60-win64-installer.exe" style="color: #ffffff; background-color: #008080;">下載</a></span></strong></p>
 <p><strong>將.exe設在可攜系統的path</strong></p>
@@ -393,8 +393,37 @@ connect = 9000
 cert = localhost.crt
 key = localhost.key
 TIMEOUTclose = 0</pre>
-<strong><span style="color: #000000; background-color: #ffffff;">重啟後<a href="https://localhost/">https://localhost/</a>就可以看到Fossil SCM網際介面<br/></span></strong></div>
-<h2>2021.10.</h2><h1>SSH</h1>
+<strong><span style="color: #000000; background-color: #ffffff;">重啟後<a href="https://localhost/">https://localhost/</a>就可以看到Fossil SCM網際介面<br/></span></strong></div><h2>2021.10.16</h2>
+<p><strong>Windows 部屬多倉儲伺服器</strong></p>
+<p><strong>nssm.exe: <span style="color: #ffffff; background-color: #008080;"><a href="https://nssm.cc/ci/nssm-2.24-101-g897c7ad.zip" style="color: #ffffff; background-color: #008080;">下載</a></span></strong></p>
+<p><strong><span style="color: #000000; background-color: #ffffff;">--------------------------------------------------------------------------------------------------</span></strong></p>
+<p><strong>因 Windows 無法透過 fossil http 直接結合 Stunnel 進行部屬，而採用 fossil server，以多個Fossil SCM 倉儲啟動為例，其中[port 9000 對應 443]，多倉儲[port 9001 對應 5443]，則Stunnel 中的 config/stunnel.conf 設定檔案內容為</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">[https]
+; 啟動單一倉儲
+; 配合從此命令轉接資料: fossil.exe server -P 127.0.0.1:9000 --https y:\tmp\fossil\pj2022.fossil
+accept  = 443
+connect = 9000
+cert = localhost.crt
+key = localhost.key
+TIMEOUTclose = 0
+ 
+[https]
+; 啟動多倉儲目錄 y:\tmp\fossil, 並內定使用 test.fossil
+; fossil.exe server y:\tmp\fossil\ --port 9001 --https --notfound test
+accept = 5443
+connect = 9001
+cert = localhost.crt
+key = localhost.key
+TIMEOUTclose = 0</pre>
+<p><strong>此時透過nssm建立三個服務，其中一個Stunnel、兩個Fossil，以.exe啟動</strong></p>
+<p><strong>Stunnel:</strong></p>
+<p><strong>無需而外的設定參數(設定檔案為stunnel.conf)</strong></p>
+<p><strong>Fossil 執行參數:</strong></p>
+<p><strong>第一個:</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">server -P 127.0.0.1:9000 --https ".fossil檔案位置"</pre>
+<p><strong>第二個:</strong></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">server "fossil資料夾位置" --port 9001 --https --notfound test</pre>
+<p><strong>將服務將server設為自動啟動，就可以在 Windows 提供 Fossil SCM的服務了</strong></p><h1>SSH</h1>
 <p><span style="color: #000000;"><strong><code class="js plain">1.建立 OpenSSH key   </code></strong></span></p>
 <p><span style="color: #000000;"><strong><code class="js plain"># pair ssh-keygen -t rsa -b 4096 -C </code><code class="js string">"使用者學號"</code></strong></span></p>
 <p><span style="color: #000000;"><strong><code class="js string">2.Putty 作為 SSH 連線客戶端工具</code></strong></span></p>
@@ -976,7 +1005,7 @@ gunicorn</pre>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">git commit -a "information"
 </pre>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">git push heroku master</pre>
-<p><br/><br/><br/><br/><br/><br/></p>
+<p><br/><br/><br/><br><br/><br/></br></p>
 <h3>Pandas 資料分析</h3>
 <p><span>在計算機編程中，pandas是Python程式語言的用於數據操縱和分析的軟體庫。特別是，它提供操縱數值表格和時間序列的資料結構和運算操作。它是在三條款BSD許可證下發行的自由軟體。它的名字衍生自術語「面板數據」，這是計量經濟學的數據集術語，它們包括了對同一個體的在多個時期上的觀測。</span></p>
 <p><strong><span>--------------------------------------------------------------------------------------------------</span></strong></p>
